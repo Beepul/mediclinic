@@ -1,0 +1,13 @@
+.tick-points
+    color: $text-gray
+    +display-flex
+    +flex-dir(column)
+    gap: 16px
+    li 
+        +display-flex
+        gap: 12px
+        +align-items(center)
+        &::before
+            content: url("../assets/icons/tick-mark.svg")
+            height: 100%
+            @extend %display-center

@@ -1,0 +1,45 @@
+.style-guide-page
+    .inner-page-banner
+        margin-bottom: 0
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .desc
+        color: $text-gray
+    .desc.center
+        text-align: center
+    .img-con
+        img
+            height: 100%
+            object-fit: cover
+    .style-guide-wrapper
+        margin-bottom: 0
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+        .style-guide-aside
+            +display-flex
+            +flex-dir(column)
+            gap: 50px
+    .style-guide-main
+        +display-flex
+        +flex-dir(column)
+        gap: 50px
+    .heading-content
+        +display-flex
+        +flex-dir(column)
+        gap: 32px
+    .full-image
+        +display-flex
+        +flex-dir(column)
+        gap: 32px
+    .left-align-image
+        +display-flex
+        +flex-dir(column)
+        gap: 32px
+        .left-img-con
+            .right-content
+                +display-flex
+                +flex-dir(column)
+                gap: $gap-md
+    .right-align-image
+        @extend .left-align-image
+    

@@ -1,0 +1,69 @@
+.departments-page
+    .inner-page-banner
+        margin-bottom: 48px
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .departments
+        margin-bottom: 48px
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+        .center-title-con
+            margin-bottom: 48px
+    .departments-wrapper
+        +display-flex
+        flex-wrap: wrap
+        gap:48px 
+        +flex-just(space-between)
+        .department-card
+            width: 354px
+            margin: 0
+    .counter-section 
+        margin-bottom: 48px
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .choose
+        padding-top: 0
+        .choose-img-con
+            position: relative
+            &::before
+                top: -12%
+                left: -0%
+                background-image: url('../assets/icons/bg-dots.png')
+                transform: rotate(0deg)
+                +xl 
+                    top: 0%
+                    left: -6%
+                    transform: rotate(90deg)
+
+            &::after
+                bottom: -4%
+                left: 82%
+                background-image: url('../assets/icons/bg-dots-2.png')
+                +xl 
+                    bottom: -8%
+
+                
+            .main-img
+                float: right
+                @extend %box-shadow
+                filter: brightness(95%)
+                width: 100%
+                
+                +xl
+                    width: 85%
+            .placeholder
+                position: absolute
+                max-width: 350px
+                bottom: -3%
+                left: -19px
+                height: 120px
+                +sm 
+                    height: 200px
+                +md 
+                    height: 250px
+                +lg 
+                    height: 200px
+                +xl 
+                    bottom: -3%
+                    left: 0
+                    height: 250px

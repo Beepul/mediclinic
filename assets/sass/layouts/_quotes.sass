@@ -1,0 +1,26 @@
+.quotes
+    &-main-con 
+        background-color: $secondary-color
+        padding: 50px 0
+    &-con 
+        @extend %display-center
+        +flex-dir(column)
+        gap: $gap-lg
+        text-align: center
+        .signature-con
+            @extend %display-center
+            +flex-dir(column)
+            p
+                color: $primary-color
+        .signature
+            width: 140px
+        .signature-author
+            +display-flex
+            +align-items(center)
+            gap: 8px
+            padding: 6px 0
+            p
+                color: $primary-color
+                @extend %regular
+                font-style: italic
+                font-size: $font-lg + 2px

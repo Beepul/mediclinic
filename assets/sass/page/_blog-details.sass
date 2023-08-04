@@ -1,0 +1,59 @@
+.blog-details-page
+    .inner-page-banner
+        margin-bottom: 0
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .blog-details-wrapper
+        margin-bottom: 0
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+        .blog-aside
+            +display-flex
+            +flex-dir(column)
+            gap: 50px
+        .main-blog
+            +display-flex
+            +flex-dir(column)
+            gap: 50px
+            .article__card
+                max-width: 100%
+                box-shadow: none
+                .article__img
+                    +radius(0)
+                .article__body
+                    padding: 24px 0 0 0
+                .article__body__bottom
+                    +display-flex
+                    +flex-dir(column)
+                    gap: 24px
+            &-item
+                +display-flex
+                +flex-dir(column)
+                gap: 32px
+                .main-desc
+                    color: $text-gray
+                .main-img
+                    max-height: 450px
+                    overflow: hidden
+                    img 
+                        object-fit: cover
+                .main-points
+                    li
+                        +display-flex
+                        +align-items(center)
+                        gap: 12px
+                        &::before
+                            content: " "
+                            background-image: url("../assets/icons/tick-mark.png")
+                            background-size: 16px
+                            background-repeat: no-repeat
+                            background-position: center
+                            width: 16px
+                            height: 16px
+                            display: block
+                .main-content
+                    +display-flex
+                    +flex-dir(column)
+                    .sub-heading
+                        margin-bottom: 16px
+                    

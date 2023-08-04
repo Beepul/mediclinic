@@ -1,0 +1,23 @@
+.testimonials-page
+    .testimonials
+        background: $white-color
+        .testimonials-title
+            +align-items(center)
+            .center-title-con
+                +align-items(center)
+                .center-heading
+                    text-align: center
+            .testimonials-title-desc
+                text-align: center
+        .testimonial-carousel
+            width: 100%
+            .grid
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                +breakpoint(1007px)
+                    grid-template-columns: 1fr 1fr
+                +breakpoint(768px)
+                    grid-template-columns: 1fr 
+            
+
+                

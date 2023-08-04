@@ -1,0 +1,218 @@
+.banner
+    background: $secondary-color
+    min-height: 200px
+    +sm 
+        min-height: 500px
+    &-three 
+        background-image: url("../assets/images/banner-three-bg.jpg")
+        background-repeat: no-repeat
+        padding: $padding-xl 0
+        background-position: top
+        background-size: 1700px
+        +sm 
+            background-size: 1400px
+        +md 
+            background-size: 1200px
+        +lg 
+            background-position: center
+            background-size: cover
+        .banner-right
+            @extend .base-card
+            +display-flex
+            +flex-dir(column)
+            gap: $gap-lg
+            background: $secondary-color-300
+            .banner-form
+                +display-flex
+                +flex-dir(column)
+                gap: $gap-sm + 4px
+                input
+                    width: 100%
+                    padding: 16px 24px
+                    border: 0
+                    +radius(4px)
+                [type=date]
+                    color: $text-gray
+                .name-input
+                    background-color: $white-color
+                .custom-select
+                    +radius(4px)
+                    padding: 16px 24px 
+                    background: $white-color
+                    .select-text
+                        padding: 0
+                        align-self: start
+                        +flex-just(space-between)
+                        width: 100%
+                        color: $text-gray
+                    .select-options
+                        right: 0
+                        left: 0
+                .form-desc
+                    color: $text-gray
+                    text-align: center
+        .banner-left
+            @extend %display-center
+            height: 100%
+            .banner-left-wrap
+                width: 100%
+                +display-flex
+                +flex-dir(column)
+                gap: $base-gap
+                .greating
+                    padding: 6px 12px
+                    color: $white-color
+                    +radius(4px)
+                    border: 1px solid $white-color
+                    width: 179px
+                    font-size: $font-md
+                    @extend %semi-bold
+                    margin-bottom: 24px
+                .heading
+                    color: $white-color
+                    @extend %regular
+                    margin-bottom:24px
+                    span
+                        @extend %bold
+                .desc
+                    color: $white-color
+                    font-size: $font-md
+                    br
+                        display: none 
+                        +md 
+                            display: block
+                .banner-left-btm
+                    +display-flex
+                    +align-items(center)
+                    gap: $gap-md
+                    flex-wrap: wrap
+                    .phone-btn
+                        +display-flex
+                        +align-items(center)
+                        gap: 12px
+                        color: $white-color
+                        +transition(0.3s ease)
+                        &:hover
+                            color: $secondary-color-200
+                        span
+                            @extend %bold
+    &-five
+        @extend .banner-three
+        background-image: url("../assets/images/banner-five-bg.jpg")
+        background-size: cover
+        background-position-x: 90%
+        padding: 80px 0
+        +sm 
+            padding: 100px 0
+        +md
+            padding: 100px 0
+        +lg 
+            background-position-x: 80%
+        +xxl
+            background-position-x: 90%
+
+        .banner-left
+            padding: 20px 0px
+            +sm 
+                padding: 60px 0 80px 0
+            +md
+                padding: 120px 0 130px 0
+            .greating
+                border: 0 !important
+                +radius(0)
+                width: auto !important
+                margin-bottom: 16px !important
+                padding: 0 !important
+            .heading
+                font-size: $heading-lg
+                +sm 
+                    font-size: $heading-xxl
+                br
+                    display: block !important
+                    +breakpoint(820px)
+                        display: none !important
+            .desc
+                br
+                    display: block 
+                    +breakpoint(629px)
+                        display: none !important
+
+    &-six
+        @extend .banner-three
+        background-image: url("../assets/images/banner-six-bg.jpg")
+        background-position: top
+        background-position-x: -350px
+        background-size: 1700px
+        +sm 
+            background-size: 1400px
+        +md 
+            background-position: center
+            background-size: cover
+        .banner-left
+            .greating
+                border: 0 !important
+                +radius(0)
+                width: auto !important
+                margin-bottom: 16px !important
+                padding: 0 !important
+            .desc
+                br
+                    display: block 
+                    +breakpoint(1068px)
+                        display: none !important
+            .btn__text
+                padding: $padding-sm $padding-xl
+                border-color: $white-color
+                color: $white-color
+                &:hover
+                    background:$primary-color
+                    border-color: $primary-color
+        .banner-right
+            display: block
+            padding: 0
+            +radius(4px !important)
+            overflow: hidden
+            margin: 0
+            background: transparent 
+            box-shadow: none
+            +lg 
+                box-shadow: $box-shadow-color
+                background: $secondary-color-300
+            +xl
+                margin-left: 50px
+            .banner-card-wrap
+                display: none 
+                +lg 
+                    display: block
+                .card
+                    margin: 0
+                    +display-flex
+                    gap: 32px
+                    min-height: auto
+                    +radius(0)
+                    .card-icon
+                        @extend %display-center
+                    .card-title
+                        margin-bottom: 8px
+                        padding-bottom: 8px
+                        h4 
+                            font-size: $base-font
+                    .card-desc
+                        padding-bottom: 16px
+                        p
+                            font-size: $font-md
+                    .card-info
+                        .card-img
+                            width: 32px
+                        p
+                            font-size: $font-md
+                .card-schedule
+                    &-body
+                        p
+                            font-size: $font-sm
+                        &-wrap 
+                            width: 100%
+            .banner-carousel
+                display: block
+                +lg 
+                    display: none

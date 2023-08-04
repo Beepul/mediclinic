@@ -1,0 +1,27 @@
+.custom-table
+    width: 100%
+    overflow-x: auto
+    table
+        border-color: red 
+        border-spacing: 0
+        width: 100%
+        thead
+            background: $primary-color
+            tr
+                border: 0 
+            th
+                color: $white-color
+                border: 0 
+                @extend %medium
+                min-width: 124px
+            th:nth-child(1)
+                min-width: 70px
+        tbody
+            border: 0
+            tr:nth-child(even)
+                background: $secondary-color
+            tr
+                border: 0
+                td
+                    color: $black-color
+                    border: 0

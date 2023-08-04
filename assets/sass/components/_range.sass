@@ -1,0 +1,28 @@
+.progress
+    width: 100%
+    &-title 
+        +display-flex
+        +align-items(center)
+        +flex-just(space-between)
+        margin-bottom: $base-padding
+        p
+            color: $text-gray
+        p:nth-child(1)
+            @extend %semi-bold
+            color: $black-color
+    &-bar 
+    &-track
+        height: 8px 
+        width: 100%
+        background: #ECECEC
+        +radius(4px)
+        overflow: hidden
+    &-thumb
+        height: 8px
+        // width: 80%
+        background: $primary-color
+        +radius(4px)
+
+
+
+

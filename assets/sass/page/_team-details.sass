@@ -1,0 +1,146 @@
+.team-details-page
+    .inner-page-banner
+        margin-bottom: 0
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .team-details-wrapper
+        margin-bottom: 0
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .main-details
+        +display-flex
+        +flex-dir(column)
+        gap: 50px
+        .main-details-item
+            +display-flex
+            +flex-dir(column)
+            gap: 24px
+            .doctor-intro
+                padding-bottom: 24px
+                +display-flex
+                +flex-dir(column)
+                gap: 4px
+                border-bottom: 1px solid $border-gray
+                .doctor-name
+                    color: $primary-color
+                .doctor-depart
+                .doctor-edu
+                    color: $text-gray
+            .doctor-desc
+                +display-flex
+                +flex-dir(column)
+                gap: 24px
+                color: $text-gray
+            .card
+                margin: 0
+                +display-flex
+                gap: 32px
+                min-height: auto
+                +radius(0)
+                +flex-dir(column)
+                +xl
+                    +flex-dir(row)
+                .card-icon
+                    padding-bottom: 0
+                    @extend %display-center
+                    span 
+                        background: $secondary-color
+                        height: 64px
+                        width: 64px
+                        @extend %display-center
+                        +radius(50%)
+                .card-title
+                    margin-bottom: 8px
+                    padding-bottom: 8px
+                    text-align: center
+                    +xl
+                        text-align: start
+                    h4 
+                        font-size: $base-font
+                .card-desc
+                    padding-bottom: 0px
+                    text-align: center
+                    +xl
+                        text-align: start
+                    p
+                        font-size: $font-md
+                .card-info
+                    .card-img
+                        width: 32px
+                    p
+                        font-size: $font-md
+            .details-listing
+                li
+                    color: $text-gray
+                    padding: 16px 0
+                li:nth-child(1)
+                    padding-top: 0
+                    padding-bottom: 16px
+                li:last-child
+                    padding-bottom: 0
+                    padding-top: 16px
+                li:not(:last-child)
+                    border-bottom: 1px solid $border-gray
+    .details-aside
+        +display-flex
+        +flex-dir(column)
+        gap: 48px
+        .details-aside-item
+            +display-flex
+            +flex-dir(column)
+            gap: 24px
+            .doctor-profile
+                position: relative
+                min-height: 380px
+                overflow: hidden
+                +radius(4px)
+                img 
+                    +radius(4px)
+                    position: absolute
+                    inset: 0
+                    width: 100%
+                    object-fit: cover
+                    min-height: 380px
+                    top: 0
+                    +sm 
+                        top: -10%
+                    +lg 
+                        top: 0
+
+                     
+            .doctor-contact
+                +display-flex
+                +flex-dir(column)
+                gap: 24px
+                p
+                    color: $text-gray
+                    font-size: $font-md
+                    +display-flex
+                    +align-items(center)
+                    gap: 8px
+                    span
+                        height: 100%
+                        @extend %display-center
+                .email
+                .phone
+                .btn-primary
+                    width: 100%
+            .social-link-con
+                gap: 24px
+                .social-link
+                    height: 48px
+                    width: 48px
+                    img
+                        width: 48px !important
+            .card-schedule
+                margin: 0
+                background: $white-color
+                .card-icon
+                .card-title
+                    color: $black-color
+                .card-schedule-body
+                    .schedule
+                        color: $text-gray
+                        +flex-dir(row)
+                        +breakpoint(316px)
+                            +flex-dir(column)

@@ -1,0 +1,50 @@
+.cta
+    width: 100%
+    position: relative
+    min-height: 494px
+    +sm 
+        min-height: 400px
+    +xl
+        min-height: 500px
+    +xxl
+        min-height: 394px
+    &-img 
+        float: right
+        height: 494px
+        +sm 
+            height: 400px
+        +xl
+            height: 500px
+        +xxl
+            height: 394px
+        img
+            object-fit: cover
+            height: 100%
+    &-overlay
+        position: absolute
+        inset: 0
+        background: var(--final-gradient, linear-gradient(90deg, #13297E 0%, #13297E 1.04%, #13297E 5.75%, #13297E 8.19%, rgba(19, 41, 126, 0.90) 25.55%, rgba(19, 41, 126, 0.81) 40.37%, rgba(19, 41, 126, 0.70) 55.15%, rgba(19, 41, 126, 0.40) 70%, rgba(19, 41, 126, 0.20) 80.42%, rgba(19, 41, 126, 0.00) 100%))
+        +md
+            background: var(--final-gradient, linear-gradient(90deg, #13297E 0%, #13297E 5.04%, #13297E 10.75%, #13297E 15.19%, rgba(19, 41, 126, 0.90) 40.55%, rgba(19, 41, 126, 0.81) 50.37%, rgba(19, 41, 126, 0.70) 55.15%, rgba(19, 41, 126, 0.40) 65%, rgba(19, 41, 126, 0.20) 75.42%, rgba(19, 41, 126, 0.00) 100%))
+        +xl
+            background: var(--final-gradient, linear-gradient(90deg, #13297E 0%, #13297E 26.04%, #13297E 43.75%, #13297E 51.19%, rgba(19, 41, 126, 0.90) 55.55%, rgba(19, 41, 126, 0.81) 60.37%, rgba(19, 41, 126, 0.70) 66.15%, rgba(19, 41, 126, 0.40) 75%, rgba(19, 41, 126, 0.20) 85.42%, rgba(19, 41, 126, 0.00) 100%))
+    &-content-wrapper
+        color: $white-color
+        max-width: 100%
+        padding: 50px 0
+        +md 
+            padding: 30px 0
+            max-width: 70%
+        +xl 
+            padding: 50px 0
+            max-width: 70%
+        +xxl 
+            padding: 50px 0
+            max-width: 50%
+        h2
+            margin-bottom: $padding-xl
+        p
+            margin-bottom: $padding-xxl
+        .btn-white
+            &:hover
+                background: $secondary-color-100

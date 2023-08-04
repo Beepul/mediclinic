@@ -1,0 +1,151 @@
+.about
+    padding-top: $container-top-bottom-padding
+    padding-bottom: $container-top-bottom-padding
+    +lg 
+        padding-top: 0
+    .center-title-con
+        display: block
+        margin-bottom: $padding-xl
+    &-desc
+        color: $text-gray
+        margin-bottom: $padding-xl
+    &-points
+        margin-bottom: $padding-xxl
+        +display-flex
+        flex-wrap: wrap
+        +border-btm
+        padding-bottom: 48px
+        li 
+            color: $text-gray
+            +display-flex
+            +align-items(center)
+            gap: 12px
+            margin-bottom: $base-padding
+            &::before
+                content: ""
+                height: 16px 
+                width: 16px
+                background-image: url(../assets/icons/tick-mark.png)
+                background-size: 16px
+        li:nth-child(1)
+            width: 100%
+            +sm 
+                width: 50%
+            margin-right: $padding-xxl
+            margin-bottom: $base-padding
+        li:nth-child(2)
+            margin-bottom: $base-padding
+        li:nth-child(3)
+            width: 100%
+            +sm 
+                width: 50%
+            margin-right: $padding-xxl
+    &-feature-con
+        +display-flex
+        margin-bottom: $base-gap
+        +flex-just(space-between)
+        gap: $base-gap
+        +flex-dir(column)
+        +sm
+            +flex-dir(row)
+        +xl 
+            +flex-just(space-between)
+    &-btn-con 
+        margin-top: $padding-xxl
+        @extend %display-center
+        +xl
+            display: block
+            margin-top: 0
+    &-feature
+        @extend %display-center
+        +flex-dir(column)
+        h5
+            font-size: 15px
+        +sm
+            font-size: 20px
+    &-image-wrapper
+        @extend %display-center
+        position: relative
+        height: 200px
+        padding-top: $padding-md
+        +sm 
+            height: 300px
+        +md
+            height: 400px
+        +lg
+            height: 500px
+        +xl
+            height: 100%
+            padding-top: $padding-xxl
+        .single-doctor
+            position: absolute
+            bottom: -10%
+            right: -18%
+            height: 260px
+            width: 350px
+            display: none
+            +xl 
+                display: block
+            +breakpoint(1347px)
+                right: -3%
+            
+        &::after
+            content: ''
+            position: absolute
+            background-image: url("../assets/icons/bg-dots-2.png") 
+            background-repeat: no-repeat
+            background-position: center
+            z-index: -1
+            width: 132px
+            height: 132px
+            right: 0
+            top: -5%
+            background-size: 110px
+            +sm 
+                background-size: 132px
+                top: -3%
+            +md 
+                top: -2%
+            +xxl
+                right: -9%
+                top: 0%
+            +breakpoint(1347px)
+                right: 0%
+        &::before
+            content: ''
+            position: absolute
+            width: 132px
+            height: 132px
+            background-image: url("../assets/icons/bg-dots.png") 
+            background-repeat: no-repeat
+            background-position: center
+            z-index: -1
+            background-size: 110px
+            bottom: -40%
+            left: -2%
+            +sm
+                background-size: 132px 
+                left: 0
+                bottom: -28%
+            +md 
+                bottom: -21%
+                left: 0%
+            +lg
+                bottom: -18%
+                left: 2%
+        
+    &-image-con
+        width: 100%
+        background-image: url('../assets/images/medical-team.jpg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        filter: brightness(90%)
+        +radius(4px)
+        overflow: hidden
+        height: 100%
+        @extend %box-shadow
+    .btn-primary
+        width: 100%
+        +sm 
+            width: auto

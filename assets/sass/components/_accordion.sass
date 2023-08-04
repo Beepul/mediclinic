@@ -1,0 +1,33 @@
+.accordion-item
+    @extend .base-card
+    min-height: auto
+    padding: 0
+    margin-bottom: 20px
+    .accordion-header
+        background-color: $secondary-color-100
+        padding: 20px
+        cursor: pointer
+        @extend %semi-bold  
+        border-radius: 4px
+        +transition(0.4s ease)
+        &::before 
+            content: url(../assets/icons/plus.svg)
+            float: right
+            margin-left: 5px
+            +transition(0.6s ease)
+    .accordion-header.active
+        color: $primary-color
+        border-radius: 4px 4px 0 0
+        &::before 
+            content: url(../assets/icons/minus.svg)
+    .accordion-content 
+        overflow: hidden
+        height: 0
+        background: $white-color
+        color: $text-gray
+        border-radius: 0 0 4px 4px
+        +transition(height 0.4s linear)
+        .accordion-body
+            padding: 20px
+    .accordion-content.active
+        height: 120px

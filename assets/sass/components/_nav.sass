@@ -1,0 +1,124 @@
+.header-nologo-wrap
+        background: $primary-color
+        display: none 
+        +lg 
+            display: block
+        .header-main
+            +display-flex
+            +flex-just(space-between)
+            +align-items(center)
+            .main-navigation
+                height: 100%
+        .nav-menu
+            gap: $gap-md
+            +display-flex
+            +lg
+                gap: $base-gap
+            +breakpoint(809px)
+                gap: $gap-sm
+
+            .menu-item
+                padding: $base-padding 0
+                &:hover
+                    .nav-links
+                        color: $secondary-color-200
+                        &::after
+                            background: $secondary-color-200 !important
+                            width: 100%
+                        
+                .nav-links
+                    +transition(0.3s ease)
+                    color: $white-color
+                    @extend %semi-bold
+                    text-transform: uppercase
+                    letter-spacing: 0.64px
+                    position: relative
+                    &::after
+                        content: ""
+                        height: 2px
+                        width: 0%
+                        position: absolute
+                        top: 90%
+                        left: 0
+                        background: $secondary-color-200
+                        +transition(width 0.3s linear)
+            .menu-item.current-menu-item
+                .nav-links
+                    position: relative
+                    &::after
+                        content: ""
+                        height: 2px
+                        width: 100%
+                        position: absolute
+                        top: 90%
+                        left: 0
+                        background: $white-color
+        .btn__secondary
+            border: 0
+            +transition(0.3s ease)
+            &:hover
+                background: $secondary-color-200 !important
+                border-color: $secondary-color-200 !important
+    
+.header-logo-mid-wrap
+    padding: 20px 0
+    .header-left > *
+        height: 100%
+    .header-left
+        height: 100%
+        display: none
+        +lg 
+            display: block
+        .nav-menu
+            height: 100%
+            +display-flex
+            .menu-item
+                +display-flex
+                +flex-dir(column)
+                +flex-just(center)
+                padding: 8px 20px 
+                &:hover
+                    .nav-links
+                        color: $primary-color-100
+                .nav-links
+                    +transition(0.3s ease)
+                    color: $primary-color
+            .menu-item.current-menu-item
+                background: $primary-color
+                +radius(4px)
+                +transition(0.3s ease)
+                &:hover
+                    background: $primary-color-100
+                    .nav-links
+                        color: $white-color
+                .nav-links
+                    color: $white-color
+    .header-right
+        float: right
+        @extend .header-left
+        display: none
+        +lg 
+            +display-flex
+        .notification-listing
+            .display-info
+                background: $secondary-color
+                padding: 10px 20px
+                color: $primary-color
+                path
+                    fill: $primary-color
+            .sub-info
+                left: auto
+                right: 0
+    .site-branding
+        height: 100%
+        @extend %display-center
+        +flex-just(start)
+        +lg 
+            +flex-just(center)
+        .site-logo
+            display: block
+            width:169px
+    .ham-wrapper
+        +display-flex
+        +lg
+            display: none

@@ -1,0 +1,25 @@
+.scroll__top
+    position: fixed
+    right: 2%
+    background: $primary-color
+    height: 50px
+    width: 50px
+    +radius(50%)
+    color: $white-color
+    @extend %box-shadow
+    @extend %display-center
+    cursor: pointer
+    z-index: 9999
+    bottom: 4%
+    visibility: hidden
+    opacity: 0
+    +transition(opacity 0.3s ease)
+    +md 
+        bottom: 8%
+    svg 
+        animation: bounce 1.2s linear infinite alternate-reverse
+@keyframes bounce
+    0%
+        transform: translateY(0rem)
+    100%
+        transform: translateY(0.4rem)

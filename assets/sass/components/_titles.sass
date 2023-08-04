@@ -1,0 +1,15 @@
+.center-title
+    color: $primary-color
+    padding-bottom: 8px
+    text-transform: capitalize
+    &-con 
+        @extend %display-center
+        +flex-dir(column)
+        .center-after 
+            height: 6px
+            width: 100px
+            background: $gradient-color
+        .center-heading 
+            padding-bottom: 16px
+            text-transform: capitalize
+

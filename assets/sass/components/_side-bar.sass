@@ -1,0 +1,128 @@
+
+.side__bar
+    position: fixed
+    inset: 0
+    background: $overlay-color
+    z-index: 999
+    color: $white-color
+    backdrop-filter: blur(1.2px)
+    transform: translateX(-100%)
+    &__wrapper 
+        background: $white-color
+        height: 100%
+        transform: translateX(-100%)
+        transition: transform 0.3s linear
+        +display-flex
+        +flex-dir(column)
+        +flex-just(space-between)
+        width: 100%
+        +sm 
+            width: 80%
+        +md 
+            width: 70%
+        .side__bar__top
+            padding: $padding-md $padding-lg
+            overflow-y: scroll 
+            .site-branding
+                +display-flex
+                +align-items(center)
+                +flex-just(space-between)
+                padding-bottom: $padding-sm
+                +border-btm
+                .site-logo
+                    display: block
+                    width: 160px
+                    img
+                        width: 100%
+                .close__btn__wrap
+                    position: relative
+                    a
+                        display: block
+                        inset: 0
+                        position: absolute
+            .main-navigation
+                padding: 12px 0
+                .nav-menu
+                    +display-flex
+                    +flex-dir(column)
+                    gap: 12px
+                    .menu-item.current-menu-item
+                        position: relative
+                        .nav-links
+                            &::before
+                                content: ""
+                                position: absolute
+                                top: 100%
+                                left: 0%
+                                width: 100%
+                                height: 2.5px
+                                background: $primary-color
+                                +transition(width 0.3s linear)
+                        .menu-item
+                            .nav-links
+                                &::before
+                                    display: none
+                    .menu-item
+                        .nav-links
+                            width: 100%
+                            display: block
+                    .menu-item.menu-item-has-children
+                        .nav-links
+                            position: relative
+                            &::after
+                                content: url(../assets/icons/down-arrow.svg) 
+                                position: absolute
+                                top: 0
+                                right: 0
+                        .menu-item
+                            .nav-links
+                                &::after
+                                    display: none
+                        .menu-item.menu-item-has-children
+                            .nav-links
+                                &::after
+                                    display: block
+                        .sub-menu
+                            padding: 12px 0 0px 12px
+                            display: none
+                            .menu-item
+                                margin-bottom: 12px
+                            
+                            .menu-item.menu-item-has-children
+                                .nav-links
+                                    color: $black-color
+                                .sub-menu
+                                    padding: 12px 0px 0px 12px
+                                    .menu-item
+                                        .nav-links
+                                            color: $black-color
+                                            &::after
+                                                display: none
+                            .menu-item.current-menu-item
+                                .nav-links
+                                    color: $primary-color
+
+        .side__bar__bottom
+            background: $primary-color
+            .social-left
+                flex-wrap: wrap
+                gap: 0
+                +sm 
+                    gap: 12px
+                    flex-wrap: nowrap
+                +md 
+                    padding: $padding-sm $padding-md
+                a
+                    font-size: $font-sm
+                    gap: 6px
+                .social-info
+                    margin-right: 12px
+                    +sm 
+                        margin-right: 0
+
+    
+
+.side__bar.active
+    transform: translateX(0)
+    .side__bar__wrapper
+        transform: translateX(0)

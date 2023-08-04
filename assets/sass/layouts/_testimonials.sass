@@ -1,0 +1,68 @@
+.testimonials
+    padding-top: 0 
+    +md
+        padding: $container-top-bottom-padding 0
+    background: $secondary-color
+    &-title 
+        height: 100%
+        +display-flex
+        +flex-dir(column)
+        +flex-just(center)
+        position: relative
+        padding: 0 $base-padding
+        +xl 
+            padding: 0
+        &::before
+            content: ""
+            position: absolute
+            width: 200px
+            height: 200px
+            background-image: url('../assets/icons/bg-dots-2.png')
+            background-repeat: no-repeat
+            background-position: center
+            z-index: -1
+            opacity: 0.2
+            top: 8%
+            left: 40%
+            background-size: 100px
+            +md 
+                top: -5%
+                left: 70%
+            +lg 
+                background-size: 180px
+                top: -30%
+                left: 0
+
+            +xl
+                top: 13%
+                left: -20%
+        .btn-primary
+            width: 100%
+            +md 
+                width: 180px 
+        .center-title-con
+            +align-items(start)
+        &-desc
+            padding: 32px 0 48px 0
+    .testimonial-carousel
+        &::after
+            content: ""
+            position: absolute
+            width: 200px
+            height: 200px
+            background-image: url('../assets/icons/bg-dots-2.png')
+            background-repeat: no-repeat
+            background-position: center
+            z-index: -1
+            opacity: 0.2
+            top: 87%
+            right: -4%
+            background-size: 120px
+            +sm
+                background-size: 180px
+            +md 
+                top: 72%
+                right: 0
+            +xl
+                top: 72%
+                right: -5%

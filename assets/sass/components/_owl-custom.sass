@@ -1,0 +1,113 @@
+.owl
+    &-dots 
+        margin-top: 28px
+        @extend %display-center
+        gap: 16px
+    &-dot
+        background: $white-color  !important
+        border: 1px solid $primary-color !important
+        border-radius: 50%
+        height: 14px
+        width: 14px
+    &-dot.active
+        background: $primary-color !important
+        height: 18px
+        width: 18px
+    &-prev, &-next 
+        display: none
+
+.banner-carousel.owl-carousel
+    position:  relative
+    .card
+        min-height: 367px
+    .owl-dots
+        top: 0
+        bottom: 0
+        left: -2%
+        +display-flex
+        position: static
+        +flex-dir(row)
+        +xxl
+            +flex-dir(column)
+            position: absolute
+
+// testimonial Carousel
+.testimonial-carousel
+    width: 100%
+    .grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+
+    @media (max-width: 768px)
+        .grid
+            grid-template-columns: 1fr
+
+
+.banner-five-carousel
+    position: relative
+    .owl-dots
+        position: absolute
+        gap: 0px 
+        top: 95%
+        left: 0
+        right: 0
+        max-width: 1158px
+        margin: auto
+        padding: 0 20px
+        +xl 
+            padding: 0
+        .owl-dot
+            flex: 1
+            +radius(0)
+            height: 4px
+            border-color: $white-color !important
+        .owl-dot.active
+            border: none !important
+            background: $white-color !important
+            span
+                height: 100%
+                display: block
+                background: $primary-color
+                animation: animateDot 2.8s linear 
+                border-color: $primary-color
+@keyframes animateDot
+    0%
+        width: 0%
+    100%
+        width: 100%
+.banner
+    position: relative
+    .banner-btn-label
+        position: absolute
+        top: 91%
+        left: 0
+        right: 0
+        z-index: 10
+        display: none
+        +sm 
+            display: block
+        +breakpoint(845px)
+            top: 87%
+
+        .container
+            +display-flex
+            height: 100%
+            +align-items(end)
+            p
+                flex: 1
+                @extend %display-center
+                color: $white-color
+                br
+                    display: none
+                    +breakpoint(845px)
+                        display: block
+
+.team-grid-carousel
+    width: 100%
+    .grid
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        +breakpoint(1007px)
+            grid-template-columns: 1fr 1fr
+        +breakpoint(768px)
+            grid-template-columns: 1fr 

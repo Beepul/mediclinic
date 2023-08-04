@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+// font
+$font:'Open Sans', sans-serif;
+
+// top bottom padding for container / sections
+$container-top-bottom-padding: 100px;
+
+// gap for flex items
+$base-gap: 48px;
+$gap-xs: 12px;
+$gap-sm: 20px;
+$gap-md: 28px;
+$gap-lg: 32px;
+
+
+// padding
+$base-padding: 16px;
+$padding-sm:12px;
+$padding-md:24px;
+$padding-lg:28px;
+$padding-xl:32px;
+$padding-xxl:48px;
+
+// font-size
+$base-font: 16px;
+$font-sm:12px;
+$font-md: 14px;
+$font-lg:18px;
+$font-xl: 20px;
+$font-xxl:24px;
+
+// heading font-size
+$heading-sm: 20px;
+$heading-md: 24px;
+$heading-lg: 32px;
+$heading-xl:40px;
+$heading-xxl: 52px;
+
+// base font-weight for heading tags
+$base-font-w: 700;

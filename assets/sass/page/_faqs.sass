@@ -1,0 +1,37 @@
+.faq-page
+    .inner-page-banner
+        margin-bottom: 0
+        +md 
+            margin-bottom: $container-top-bottom-padding
+    .faqs
+        margin-bottom: 0
+        +sm 
+            padding-bottom: 48px
+        .faqs-left
+            padding: 0 16px
+            +display-flex
+            +flex-dir(column)
+            gap: 48px
+            .center-title-con
+                +align-items(start)
+            .accordion-header
+                background-color: $white-color 
+            .accordion-header.active
+                background-color: $secondary-color
+    .emergency-contact
+        background: $secondary-color
+        padding: 50px 0
+        .center-title-con
+            +align-items(start)
+        .call-btn
+            @extend %display-center
+            height: 100%
+            margin-top: 24px 
+            +flex-just(start)
+            +lg 
+                +flex-just(center)
+                margin-top: 0
+            .btn-primary
+            
+    .article
+        padding-top: 48px 

@@ -1,0 +1,132 @@
+.single-service-page
+    .inner-page-banner
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .team-section
+        background: $secondary-color
+        padding: $container-top-bottom-padding 0
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .appointment
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .pricing
+        background: $secondary-color
+    .faq
+        background: $white-color
+        .accordion-header
+            background: $white-color
+        .accordion-header.active
+            background: $secondary-color
+    .services-wrapper
+        background: $secondary-color
+    .quotes-wrapper
+        background: $secondary-color
+        .quotes-card
+            border-left: 0
+            background: transparent
+            &::after
+                display: none
+            .quote
+                font-size: 22px
+                text-align: center
+                +md 
+                    font-size: 40px
+            .quote-desc
+                color: $primary-color
+                text-align: center
+    .services-wrap
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+        .service-left
+            +display-flex
+            +flex-dir(column)
+            gap: 32px
+            
+            .service-desc
+                +display-flex
+                +flex-dir(column)
+                gap: 24px
+                color: $text-gray
+            .service-points
+                color: $text-gray
+                +display-flex
+                +flex-dir(column)
+                gap: 16px
+                li 
+                    +display-flex
+                    gap: 12px
+                    +align-items(center)
+                    &::before
+                        content: url("../assets/icons/tick-mark.svg")
+                        height: 100%
+                        @extend %display-center
+        .service-right
+            height: 400px
+         
+            // overflow: hidden
+            +radius(4px)
+            background-image: url("../assets/images/female-doc.jpg")
+            background-repeat: no-repeat
+            display: block
+            filter: brightness(94%)
+            position: relative
+            background-size: 100%
+            background-position-y: 20%
+            +lg 
+                background-position: center
+                height: 100%
+                background-size: 600px
+        .filler
+            position: relative
+            height: 100%
+            &::before
+                content: ""
+                background-image: url("../assets/icons/bg-dots-2.png")
+                background-size: 200px
+                background-repeat: no-repeat
+                background-position: center
+                height: 200px
+                width: 200px
+                position: absolute
+                display: block
+                top: -8%
+                right: -17%
+                opacity: 0.4
+                display: none
+                +md 
+                    display: block
+            &::after
+                content: ""
+                background-image: url("../assets/icons/bg-dots.png")
+                background-size: 200px
+                background-repeat: no-repeat
+                background-position: center
+                height: 200px
+                width: 200px
+                position: absolute
+                display: block
+                bottom: 0%
+                right: -32%
+                opacity: 0.4
+                transform: rotate(90deg)
+                display: none
+                +md 
+                    display: block
+            .service-right.shadow
+                background-image: url("../assets/images/doctors-walking.jpg")
+                background-position-y: 30%
+                +lg 
+                    box-shadow: 20px 20px 0px 0px $secondary-color
+                +xl 
+                    box-shadow: 54px 50px 0px 0px $secondary-color
+
+
+        .center-title-con
+            +align-items(start)
+    .services-wrap:nth-child(2)
+        padding: $container-top-bottom-padding 0

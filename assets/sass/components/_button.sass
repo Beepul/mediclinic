@@ -1,0 +1,44 @@
+.btn
+    &-primary
+        font-size: $base-font
+        color: $white-color
+        background: $primary-color
+        border-color: $primary-color
+        padding: $padding-sm $padding-xl
+        +radius(4px)
+        transition: all 0.3s linear
+        &:hover
+            background: $primary-color-100 
+            border-color: $primary-color-100
+
+    &-white 
+        @extend .btn-primary
+        background: $white-color
+        color: $primary-color
+        @extend %semi-bold
+    &__text
+        color: $primary-color
+        cursor: pointer
+        @extend %semi-bold
+        +display-flex
+        +align-items(center)
+        gap: 4px
+        +transition(0.3s ease)
+        +radius(4px)
+        &:hover
+            color: $primary-color-100
+            svg
+                path
+                    fill: $primary-color-100
+        svg
+            path
+                +transition(0.3s ease)
+
+    &__secondary
+        @extend .btn-primary
+        background: $sec-btn
+        color: $primary-color
+        @extend %semi-bold
+        &:hover
+            background: $secondary-color !important
+            border-color: $secondary-color !important

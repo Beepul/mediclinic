@@ -1,0 +1,468 @@
+.header
+    background-color: $white-color
+    color: $black-color
+    font-size: $base-font
+    padding-top: $padding-md
+    padding-bottom: $padding-md 
+    +xl 
+        padding: 0
+    .site-branding
+        +display-flex
+        +flex-dir(column)
+        +flex-just(center)
+        .site-logo
+            img
+                width: 160px
+    &-nav-con
+        display: none 
+        +xl
+            +display-flex
+            +flex-just(center)
+            +align-items(center)
+        .main-navigation
+            height: 100%
+            .nav-menu
+                @extend %display-center
+                gap: $gap-md
+                height: 100%
+                .menu-item
+                    @extend %display-center
+                    height: 100%
+                    padding: $padding-md 0
+                    cursor: pointer
+                    .nav-links
+                        width: 100%
+                        position: relative
+                        +transition(0.3s ease)
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 100%
+                            left: 0%
+                            width: 0%
+                            height: 2.5px
+                            background: $primary-color
+                            +transition(width 0.3s linear)
+                        &:hover
+                            color: $primary-color
+                            &::before
+                                width: 100%
+                    
+                .menu-item.current-menu-item
+                    .nav-links
+                        &::before
+                            width: 100%
+                .menu-item.menu-item-has-children
+                    position: relative
+                    svg
+                        margin-top: 3px
+                        path
+                            +transition(0.3s ease)
+                    &::after
+                        content: url("../assets/icons/down-arrow.svg")
+                        margin-left: 4px
+                        margin-top: 3px
+                        display: none
+                    &:hover
+                        path
+                            fill: $primary-color
+                        .sub-menu
+                            visibility: visible
+                            opacity: 1
+                    .sub-menu
+                        position: absolute
+                        background: $white-color 
+                        left: -100%
+                        top: 100%
+                        min-width: 240px
+                        @extend .base-card
+                        min-height: auto
+                        padding: 0
+                        z-index: 20
+                        border-radius: 0 0 5px 5px
+                        box-shadow: 0px 4px 12px 1px rgba(23, 140, 239, 0.24)
+                        border-top: 3px solid $primary-color
+                        transition: opacity 0.3s ease-out
+                        opacity: 0
+                        visibility: hidden
+                        .menu-item:last-child
+                            +radius(0 0 5px 5px)
+                        .menu-item
+                            padding: 10px 20px
+                            transition: 0.3s all linear
+                            +display-flex 
+                            +flex-just(start)
+                            .nav-links
+                                &::before
+                                    display: none
+                            
+                            &:hover
+                                background: $primary-color
+                                a 
+                                    color: $white-color
+                            &:not(:last-child)
+                                +border-btm
+                        .menu-item.menu-item-has-children
+                            position: relative
+                            &::after
+                                display: none
+                            &:hover
+                                .sub-menu
+                                    opacity: 1
+                                    visibility: visible
+                                .nav-links
+                                    path
+                                        fill: $white-color
+                            .nav-links
+                                +display-flex 
+                                +flex-just(space-between)
+                                +align-items(center)
+                            .sub-menu
+                                opacity: 0
+                                visibility: hidden
+                                position: absolute
+                                left: 100%
+                                background: $white-color
+                                z-index: 10
+                                width: 100%
+                                top: 0
+                                box-shadow: $box-shadow-color
+                                .menu-item:last-child
+                                    +radius(0 0 5px 5px)
+                                .menu-item
+                                    &:hover
+                                        .nav-links
+                                            color: $white-color
+                                    .nav-links
+                                        width: 100%
+                                        color: $black-color
+    &-right
+        display: none
+        +xl
+            +display-flex
+            +align-items(center)
+            +flex-just(end)
+            gap: $gap-sm
+        a
+            @extend %semi-bold
+            +display-flex
+            +align-items(center)
+            gap: $gap-sm - 10px
+            color: $primary-color
+            +transition(0.3s ease)
+            svg
+                path
+                    +transition(0.3s ease)
+
+            &:hover
+                color: $primary-color-100
+                svg
+                    path
+                        fill: $primary-color-100
+
+.header-two
+    .header-top
+        padding: $padding-lg 0
+        .site-branding 
+            height: 100%
+            +display-flex 
+            +flex-dir(column)
+            +flex-just(center)
+        .site-logo
+            display: block
+            width: 160px
+        .ham-wrapper
+            +display-flex
+            +lg 
+                display: none 
+    
+.header-three
+    .social
+        background: $white-color
+        a
+            color: $primary-color
+            &:hover
+                color: $primary-color-100
+                path
+                    fill: $primary-color-100
+            path
+                fill: $primary-color
+    .header-mid
+        background: $primary-color
+        padding: $padding-lg 0
+        +lg 
+            padding: 0
+        .site-branding
+            height: 100%
+            +display-flex
+            +flex-dir(column)
+            +flex-just(center)
+            .site-logo
+                display: block
+                width:169px
+        .input-wrapper
+            height: 100%
+            @extend %display-center
+            display: none 
+            +lg 
+                +display-flex
+            form
+                +radius(4px)
+                // overflow: hidden
+                background: $white-color
+                width: 579px
+                height: 46px
+                +display-flex
+                +flex-just(space-between)
+                border: 2px solid $white-color
+                input
+                    flex: 1
+                    border: 0
+                    padding: 10px 0px 10px 24px 
+                    &::placeholder
+                        font-size: $font-md
+                        color: $text-gray
+                .select-con
+                    position: relative
+                    +display-flex
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 0.5px
+                        height: 60%
+                        top: 20%
+                        left: 0
+                        z-index: 10
+                        background: rgba(96, 96, 96, 0.3568627451)
+                    .btn-primary
+                        height: 100%
+                        padding: 12px 28px
+        .ham-wrapper
+            +display-flex
+            +lg 
+                display: none
+            .ham-bar
+                background: $white-color
+        .notification-listing
+            display: none
+            +lg 
+                display: block
+            .sub-info
+                right: 0
+        .display-info
+            +flex-just(end)
+            padding: 24px 0
+    .header-nologo-wrap
+        background: $white-color
+        .menu-item
+            &:hover
+                .nav-links
+                    color: $primary-color-100 !important
+                    &::after
+                        background: $primary-color-100 !important
+        .nav-links
+            color: $primary-color !important
+            &::after
+                background: $primary-color !important
+        .menu-item.current-menu-item
+                .nav-links
+                    position: relative
+                    &::after
+                        content: ""
+                        height: 2px
+                        width: 100%
+                        position: absolute
+                        top: 100%
+                        left: 0
+                        background: $primary-color 
+.header-four
+    position: relative
+    .header-top
+        padding: 20px 0
+        +md
+            padding: 28px 0 54px 0
+        .opening-hour
+            display: none 
+            +md     
+                display: block
+            a
+                +display-flex 
+                +align-items(center)
+                gap: 8px
+        .social-link-con
+            float: right
+            display: none 
+            +md 
+                +display-flex
+        .site-branding
+                height: 100%
+                @extend %display-center
+                +flex-just(start)
+                +md 
+                    +flex-just(center)
+                .site-logo
+                    display: block
+                    width:169px
+        .ham-wrapper
+            +display-flex
+            +md 
+                display: none
+    .header-nologo-wrap
+        background: transparent
+        position: absolute
+        z-index: 10
+        left: 0
+        right: 0
+        top: 84%
+        display: none
+        +md 
+            display: block
+        .header-nologo-con
+            .main-navigation
+                background: $sky-blue
+                border-radius: 4px 0 0 4px
+                padding-left: 24px
+                .nav-menu
+                    gap: 14px
+                    +lg 
+                        gap: 28px
+                    +xl 
+                        gap: 28px
+            .search-icon
+                background: $sky-blue
+                height: 100%
+                @extend %display-center
+                cursor: pointer
+                path
+                    +transition(0.3s ease)
+                svg:hover
+                    path
+                        fill: $secondary-color-200
+            .notification-listing
+                height: 100%
+                .display-info
+                    border: 1px solid $border-gray
+                    border-radius: 0 4px 4px 0
+                    height: 100%
+                    +flex-just(center)
+                    width: auto
+                    background: $white-color
+                    color: $sky-blue
+                    path
+                        fill: $sky-blue
+                .sub-info
+                    right: 0
+                    .menu-item
+                        &:hover
+                            background: $sky-blue
+                            a
+                                color: $white-color
+                                path
+                                    fill: $white-color
+                        a
+                            color: $sky-blue
+                            path
+                                fill: $sky-blue
+    .side__bar
+        .side__bar__bottom
+            background: $sky-blue
+
+                
+       
+        
+        
+.header-five
+    .header-top
+        background: $primary-color
+        padding: 0
+        +md
+            padding: $base-padding 0
+        .social-link-con
+            float: left
+            display: none
+            +lg   
+                +display-flex
+            .share-link
+                padding-left: 4px
+                &:hover
+                    span
+                        color: $secondary-color-200
+                    path
+                        fill: $secondary-color-200
+                span
+                    +transition(0.3s ease)
+                    color: $white-color
+                path
+                    +transition(0.3s ease)
+                    fill: $white-color
+        .social-left
+            float: right
+            width: 100%
+            +flex-dir(column)
+            gap: 10px
+            +md
+                gap: 20px
+                +flex-dir(row) 
+            +lg 
+                width: auto
+            .social-info
+                width: 100%
+                @extend %display-center
+                +md 
+                    width: 50%
+                +lg
+                    display: block
+                    
+                    width: auto
+            .social-info:not(:last-child)
+                position: relative
+                padding-right: 20px
+                border: 0
+                +md 
+                    border-right: 0.2px solid $white-color
+    .notification-listing
+        .sub-info
+            left: 0 !important
+
+.header-six
+    @extend .header-five
+    .social-left
+        float: left
+        width: auto
+        +flex-dir(column)
+        +flex-just(center)
+        +sm 
+            +flex-just(start !important)
+            +flex-dir(row !important)
+        +lg 
+            width: 100% !important
+        .social-info
+            width: 100%
+            +sm
+                width: auto !important
+        .social-info:not(:last-child)
+            position: relative
+            padding-right: 20px
+            border: 0
+            +sm 
+                border-right: 0.2px solid $white-color !important
+    .header-logo-mid-wrap
+        .menu-item
+            cursor: pointer
+        .menu-item.current-menu-item
+            background: $secondary-color !important
+            &:hover
+                background: $secondary-color-200 !important
+            a
+                color: $primary-color !important
+    .social-link-con
+        width: 100%
+        +flex-just(end)
+        float: right !important 
+        +sm 
+            display: flex !important
+        .social-link
+            border-radius: 0
+            img
+                width: 20px !important
+                

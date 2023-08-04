@@ -1,0 +1,14 @@
+.ham
+    &-wrapper 
+        @extend %display-center
+        +flex-dir(column)
+        +align-items(end)
+        gap: 6px
+        height: 100%
+        +xl
+            display: none
+    &-bar
+        height: 2px
+        width: 20px 
+        background: $black-color
+        cursor: pointer

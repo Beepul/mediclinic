@@ -1,0 +1,39 @@
+.social
+    background-color: $primary-color
+    color: $white-color
+    font-size: $font-md
+    padding: $padding-md - 10px 0
+    display: none
+    +sm
+        display: block
+    &-left
+        +display-flex
+        +align-items(center)
+        gap: $base-padding - 4px
+        height: 100%
+        +flex-just(center)
+        margin-bottom: $padding-lg
+        +md 
+            +flex-just(start)
+            margin-bottom: 0
+    &-info 
+        a
+            +display-flex 
+            +align-items(center)
+            gap: 8px
+            color: $white-color
+            +transition(0.3s ease)
+            &:hover
+                color: $secondary-color-200
+                svg
+                    path
+                        fill: $secondary-color-200
+            svg 
+                path
+                    +transition(0.3s ease)
+            
+.social-head
+    .social-link-con
+        +flex-just(center)
+        +md
+            +flex-just(end)

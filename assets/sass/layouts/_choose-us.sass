@@ -1,0 +1,52 @@
+.choose
+    padding-top: $container-top-bottom-padding
+    padding-bottom: 0 
+    +md
+        padding: $container-top-bottom-padding 0
+    &-img-con
+        position: relative
+        height: 100%
+        &::before
+            content: ''
+            position: absolute
+            top: -5%
+            left: -9%
+            width: 132px
+            height: 132px
+            background-image: url('../assets/icons/bg-dots-2.png')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 132px
+            z-index: -1
+        &::after
+            content: ''
+            position: absolute
+            bottom: -0%
+            left: -20%
+            width: 132px
+            height: 132px
+            background-image: url('../assets/icons/bg-dots.png')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 132px
+            z-index: -1
+            transform: rotate(90deg)
+        img
+            height: 100%
+            object-fit: cover
+            +radius(4px)
+    .center-title-con
+        +align-items(start)
+    &-content-con
+        +display-flex
+        +flex-dir(column)
+        gap: 32px
+    &-desc
+        color: $text-gray
+    &-progress-con
+        +display-flex
+        +flex-dir(column)
+        gap: 32px
+        margin-bottom: 16px
+    .btn-primary
+        width: 170px

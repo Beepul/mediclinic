@@ -1,0 +1,65 @@
+.contact-page
+    .inner-page-banner
+        margin-bottom: 0
+        +md 
+            margin-bottom: $container-top-bottom-padding
+    .contact-info-wrap
+        margin-bottom: 0
+        +md 
+            margin-bottom: $container-top-bottom-padding
+        .card
+            margin: 0
+            +display-flex
+            gap: 32px
+            min-height: auto
+            +radius(0)
+            +flex-dir(column)
+            +xl
+                +flex-dir(row)
+            .card-icon
+                @extend %display-center
+                span 
+                    background: $secondary-color
+                    height: 64px
+                    width: 64px
+                    @extend %display-center
+                    +radius(50%)
+            .card-title
+                margin-bottom: 8px
+                padding-bottom: 8px
+                text-align: center
+                +xl
+                    text-align: start
+                h4 
+                    font-size: $base-font
+            .card-desc
+                padding-bottom: 16px
+                text-align: center
+                +xl
+                    text-align: start
+                p
+                    font-size: $font-md
+            .card-info
+                .card-img
+                    width: 32px
+                p
+                    font-size: $font-md
+    .contact-form-wrap
+        margin-bottom: 48px
+        +md 
+            margin-bottom: $container-top-bottom-padding
+
+    .contact-social-links
+        +display-flex
+        gap: 24px
+        +align-items(center)
+        margin-top: 0
+        flex-wrap: wrap
+        +md 
+            margin-top: 48px
+    .map-wrap
+        iframe
+            width: 100%
+            height: 350px
+            +lg 
+                height: 450px

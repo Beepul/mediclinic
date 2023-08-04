@@ -1,0 +1,54 @@
+.notification-listing
+    position: relative
+    &:hover
+        .sub-info
+            visibility: visible
+            opacity: 1
+    .display-info
+        color: $white-color
+        +display-flex
+        +align-items(center)
+        gap: 8px
+        cursor: pointer
+        +transition(0.3s ease)
+        font-size: $font-md
+        padding: 10px 0
+        svg
+            path
+                +transition(0.3s ease)
+        &:hover
+            color: $secondary-color-200
+            svg
+                path
+                    fill: $secondary-color-200
+
+    .sub-info
+        position: absolute
+        top: 100%
+        left: 0
+        background: $white-color
+        z-index: 20
+        border-radius: 0 0 5px 5px
+        overflow: hidden
+        visibility: hidden
+        opacity: 0
+        +transition(opacity 0.3s ease)
+        box-shadow: 0px 4px 12px 1px rgba(23, 140, 239, 0.24)
+        .menu-item
+            +border-btm
+            padding: 10px 20px
+            +transition(0.3s ease)
+            &:hover
+                background: $primary-color
+                a
+                    color: $white-color  
+                svg 
+                    path
+                        fill: $white-color
+            a
+                +display-flex
+                +align-items(center)
+                gap: 8px
+                +transition(0.3s ease)
+                path
+                    +transition(0.3s ease)

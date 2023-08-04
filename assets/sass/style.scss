@@ -1,0 +1,64 @@
+// base
+@import './base/base';
+
+// components
+@import './components/scrolltop';
+@import './components/loadingSpinner';
+@import './components/videoPlayer';
+@import './components/side-bar';
+@import './components/social';
+@import './components/button';
+@import './components/cards';
+@import './components/titles';
+@import './components/range';
+@import './components/accordion';
+@import './components/owl-custom';
+@import './components/nav';
+@import './components/dropdown';
+@import './components/ham-bar.sass';
+@import './components/selectOption';
+@import './components/breadcrumb.sass';
+@import './components/form';
+@import './components/table';
+@import './components/tick-points';
+
+// layouts
+@import './layouts/notification';
+@import './layouts/social-links';
+@import './layouts/header';
+@import './layouts/about';
+@import './layouts/quotes';
+@import './layouts/services';
+@import './layouts/counter';
+@import './layouts/choose-us';
+@import './layouts/departments';
+@import './layouts/appointment';
+@import './layouts/team';
+@import './layouts/pricing';
+@import './layouts/testimonials';
+@import './layouts/cta';
+@import './layouts/article';
+@import './layouts/faq';
+@import './layouts/partners';
+@import './layouts/footer';
+@import './layouts/banner';
+
+
+
+
+// pages
+@import './page/home';
+@import './page/about-us';
+@import './page/pricing';
+@import './page/testimonials';
+@import './page/contact';
+@import './page/faqs';
+@import './page/our-team';
+@import './page/team-details';
+@import './page/blogs';
+@import './page/blog-details';
+@import "./page/services";
+@import './page/departments';
+@import './page/single-service';
+@import './page/department-single';
+@import './page/style-guide';

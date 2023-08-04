@@ -1,0 +1,57 @@
+@import 'flex'
+
+// sticky element
+=sticky
+    position: -webkit-sticky !important
+    position: -moz-sticky !important
+    position: -ms-sticky !important
+    position: -o-sticky !important
+    position: sticky !important
+
+// animation frame
+=animation($animation, $time, $transition)
+    -webkit-animation: $animation $time $transition 
+    -o-animation: $animation $time $transition
+    -moz-animation: $animation $time $transition
+    animation: $animation $time $transition
+
+// transition
+=transition($transition)
+    -webkit-transition: $transition
+    -moz-transition: $transition 
+    -ms-transition: $transition  
+    -o-transition: $transition 
+    transition: $transition 
+
+// transform
+=transform($transform)
+    -webkit-transform: $transform
+    -moz-transform: $transform 
+    -ms-transform: $transform  
+    -o-transform: $transform 
+    transform: $transform 
+
+// border radius
+=radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius 
+    -ms-border-radius: $radius  
+    border-radius: $radius
+
+=gradient ( $deg, $color1, $color2)
+    background: $color1
+    background: -webkit-linear-gradient($deg, $color1, $color2)
+    background: -moz-linear-gradient($deg, $color1, $color2)
+    background: linear-gradient($deg, $color1, $color2)
+
+=bg-gradient ( $deg, $color1, $ratio1, $color2, $ratio2)
+    background: $color1
+    background: -webkit-linear-gradient($deg, $color1 $ratio1, $color2 $ratio2)
+    background: -moz-linear-gradient($deg, $color1 $ratio1, $color2 $ratio2)
+    background: linear-gradient($deg, $color1 $ratio1, $color2 $ratio2)
+
+=border-btm($color:$border-gray)
+    border-bottom: 1px solid $color
+
+=bg-color($color:$white-color)
+    background-color: $color

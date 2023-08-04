@@ -1,0 +1,77 @@
+.department-single-page
+    .inner-page-banner
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .department-info-wrap
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+        .depart-wrapper
+            +display-flex
+            +flex-dir(column)
+            gap: 32px
+        .depart-btm
+            color: $text-gray
+        .center-title-con
+            +align-items(start)
+        .depart-left
+            +display-flex
+            +flex-dir(column)
+            gap: 32px
+            .depart-desc
+                color: $text-gray
+            .depart-points
+                color: $text-gray
+                +display-flex
+                +flex-dir(column)
+                gap: 16px
+                li 
+                    +display-flex
+                    gap: 12px
+                    +align-items(center)
+                    &::before
+                        content: url("../assets/icons/tick-mark.svg")
+                        height: 100%
+                        @extend %display-center
+        .depart-right
+            height: 200px
+         
+            // overflow: hidden
+            +radius(4px)
+            background-image: url("../assets/images/team-doctors.jpg")
+            background-repeat: no-repeat
+            display: block
+            filter: brightness(94%)
+            position: relative
+            background-size: 100%
+            background-position-y: 20%
+            +sm 
+                height: 400px
+            +lg 
+                background-position: center
+                background-size: 600px
+                height: 100%
+    .services-wrapper
+        background: $secondary-color
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+        .card-desc
+            margin-bottom: 0
+    .team-section
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .counter-section
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .appointment
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding
+    .faq
+        margin-bottom: 50px 
+        +lg 
+            margin-bottom: $container-top-bottom-padding

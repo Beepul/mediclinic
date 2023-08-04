@@ -1,0 +1,36 @@
+.custom-select
+    position: relative
+    height: 100%
+    +display-flex
+    +flex-dir(column)
+    .select-text
+        align-self: center
+        height: 100%
+        @extend %display-center
+        padding-left: 24px
+        padding-right: 48px
+        cursor: pointer
+        gap: 6px
+        &:hover
+            color: $primary-color
+        &::after
+            content: url("../assets/icons/chevron.svg")
+            transform: rotateX(180deg) translateY(5px)
+            
+    .select-options
+        position: absolute    
+        top: 104%
+        background: $white-color
+        width: 100%
+        box-shadow: 0px 12px 12px 1px rgba(23, 140, 239, 0.24)
+        border-radius: 0 0 5px 5px
+        z-index: 20
+        display: none
+        li 
+            border-bottom: 1px solid #ECECEC
+            padding: 10px 20px
+            cursor:  pointer 
+            +transition(0.3s ease)
+            &:hover
+                background: $primary-color
+                color: $white-color

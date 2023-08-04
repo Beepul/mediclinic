@@ -1,0 +1,188 @@
+@use "sass:math";
+
+$grid-columns:12;
+$grid-gaps:(
+    "0": 0,
+    "1":10px,
+    "2": 20px,
+    "3": 30px,
+    "4": 40px,
+    "5": 50px,
+    "6": 60px
+);
+$order: 1,2,3,4,5;
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
+// base layout classes
+
+.container{
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+// grid gaps
+@each $key, $val in $grid-gaps{
+    .gap-#{$key} > *{
+        padding: $val;
+    }
+    .gap-#{$key}{
+        margin-left: -$val;
+        margin-right: -$val;
+    }
+}
+
+// justify-content classes
+@each $val in $layout-values{
+    .justify-#{$val}{
+        justify-content: $val;
+    }
+}
+
+// col classes
+@include xs{
+    @for $i from 1 through $grid-columns{
+        .col-#{$i}-xs{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+    @each $val in $order{
+        .order-#{$val}-xs{
+            order: #{$val};
+        }
+    }
+    @each $key, $val in $grid-gaps{
+        .gap-#{$key}-xs > *{
+            padding: $val;
+        }
+        .gap-#{$key}-xs{
+            margin-left: -$val;
+            margin-right: -$val;
+        }
+    }
+}
+@include sm{
+    @for $i from 1 through $grid-columns{
+        .col-#{$i}-sm{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+    @each $val in $order{
+        .order-#{$val}-sm{
+            order: #{$val};
+        }
+    }
+    @each $key, $val in $grid-gaps{
+        .gap-#{$key}-sm > *{
+            padding: $val;
+        }
+        .gap-#{$key}-sm{
+            margin-left: -$val;
+            margin-right: -$val;
+        }
+    }
+}
+@include md{
+    @for $i from 1 through $grid-columns{
+        .col-#{$i}-md{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+    @each $val in $order{
+        .order-#{$val}-md{
+            order: #{$val};
+        }
+    }
+    @each $key, $val in $grid-gaps{
+        .gap-#{$key}-md > *{
+            padding: $val;
+        }
+        .gap-#{$key}-md{
+            margin-left: -$val;
+            margin-right: -$val;
+        }
+    }
+}
+@include lg{
+    @for $i from 1 through $grid-columns{
+        .col-#{$i}-lg{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+    @each $val in $order{
+        .order-#{$val}-lg{
+            order: #{$val};
+        }
+    }
+    @each $key, $val in $grid-gaps{
+        .gap-#{$key}-lg > *{
+            padding: $val;
+        }
+        .gap-#{$key}-lg{
+            margin-left: -$val;
+            margin-right: -$val;
+        }
+    }
+}
+@include xl{
+    @for $i from 1 through $grid-columns{
+        .col-#{$i}-xl{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+    @each $val in $order{
+        .order-#{$val}-xl{
+            order: #{$val};
+        }
+    }
+    @each $key, $val in $grid-gaps{
+        .gap-#{$key}-xl > *{
+            padding: $val;
+        }
+        .gap-#{$key}-xl{
+            margin-left: -$val;
+            margin-right: -$val;
+        }
+    }
+}
+@include xxl{
+    @for $i from 1 through $grid-columns{
+        .col-#{$i}-xxl{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+    @each $val in $order{
+        .order-#{$val}-xxl{
+            order: #{$val};
+        }
+    }
+    @each $key, $val in $grid-gaps{
+        .gap-#{$key}-xxl > *{
+            padding: $val;
+        }
+        .gap-#{$key}-xxl{
+            margin-left: -$val;
+            margin-right: -$val;
+        }
+    }
+}

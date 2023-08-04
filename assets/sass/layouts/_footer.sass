@@ -1,0 +1,100 @@
+.footer
+    background: $primary-color
+    padding-top: 60px
+    color: $white-color
+    overflow: hidden
+    &__title
+        margin-bottom: 16px
+    &__top
+        padding-bottom: 10px
+        +border-btm
+        .gap-5 > * 
+            padding: 20px 50px
+        .subs__form
+            width: 100%
+            background: $sec-btn
+            +display-flex
+            +flex-just(end)
+            +radius(4px)
+            input
+                width: 100%
+                border: 0
+                border-radius: 4px 0 0 4px
+                padding: 6px 24px
+            .btn__secondary
+                border-radius: 0 4px 4px 0
+                border: 0
+    &__main
+        padding: 30px 0
+        &__left
+            +display-flex
+            +flex-dir(column)
+            gap: 24px
+        .footer__logo
+            width: 160px
+        .social-left
+            +flex-dir(column)
+            +align-items(start)
+        &__downloads
+            +display-flex
+            gap: $gap-sm
+            .download__img
+                width:118px
+        .departments__list
+            +display-flex 
+            +flex-dir(column)
+            gap: $gap-sm
+            .department
+                color: $white-color
+                margin-left: 8px
+                position: relative
+                &:hover
+                    color: $secondary-color-200
+                    &::after
+                        width: 100%
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: -12%
+                    left: 0%
+                    width: 0
+                    height: 0.2px 
+                    background-color: $secondary-color-200
+                    +transition(width 0.3s linear)
+        .services__list
+            @extend .departments__list
+            .service
+                @extend .department
+        .footer__schedule
+            .card-schedule
+                padding: 22px 0
+                background: transparent
+                box-shadow: none
+                min-height: auto
+                margin: 0
+                .schedule
+                    +flex-dir(row)
+                    +lg 
+                        +flex-dir(column)
+                    +xl
+                        +flex-dir(row)
+            .btn__secondary
+                width: 100%
+                background: $sec-btn
+                &:hover
+                    background:#bfd6f3 !important
+                    border-color: #bfd6f3 !important
+    &__bottom
+        border-top: 1px solid $border-gray
+        padding: 24px 0
+        .copy__right
+            height: 100%
+            font-size: $font-md
+            +display-flex
+            +align-items(center)
+        .social-link-con
+            +flex-just(start)
+            margin-top: $padding-sm
+            +md 
+                margin-top: 0
+                +flex-just(end)

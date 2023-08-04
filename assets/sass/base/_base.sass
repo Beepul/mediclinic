@@ -1,0 +1,32 @@
+@import '../utils/global'
+@import 'reset'
+@import 'normalize'
+@import 'typography'
+@import 'font'
+
+
+*:focus 
+    outline: none
+
+*, ::after, ::before 
+    box-sizing: border-box
+*
+    font-family: $font
+.w
+    &-100
+        width: 100%
+
+.container
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 20px
+    box-sizing: border-box
+
+.row
+    display: flex
+    flex-flow: row wrap
+.site
+    overflow-x: hidden
+    min-height: 100vh
+
