@@ -6774,12 +6774,22 @@ h5 {
 }
 
 .partners {
-  padding: 60px 0;
+  padding: 30px 0;
+}
+@media screen and (min-width: 480px) {
+  .partners {
+    padding: 40px 0;
+  }
+}
+@media screen and (min-width: 974px) {
+  .partners {
+    padding: 60px 0;
+  }
 }
 .partners .partner__logo img {
-  min-height: 72px;
-  height: 80px;
-  max-height: 94px;
+  min-height: 62px;
+  height: 64px;
+  max-height: 82px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -6790,23 +6800,24 @@ h5 {
   }
 }
 
-.footer {
+.site-footer {
   background: #13297E;
-  padding-top: 60px;
   color: #FFFFFF;
   overflow: hidden;
 }
-.footer__title {
-  margin-bottom: 16px;
-}
-.footer__top {
-  padding-bottom: 10px;
+.site-footer .footer-newsletter {
   border-bottom: 1px solid #ECECEC;
+  padding: 10px 0;
 }
-.footer__top .gap-5 > * {
+.site-footer .footer-newsletter .gap-5 > * {
   padding: 20px 50px;
 }
-.footer__top .subs__form {
+@media screen and (min-width: 767px) {
+  .site-footer .footer-newsletter .gap-5 > * {
+    padding: 50px;
+  }
+}
+.site-footer .footer-newsletter .wp-submitWrap {
   width: 100%;
   background: #EFF7FE;
   display: -webkit-box;
@@ -6819,20 +6830,30 @@ h5 {
   justify-content: end;
   border-radius: 4px;
 }
-.footer__top .subs__form input {
+.site-footer .footer-newsletter .wp-submitWrap .wpforms-field-container, .site-footer .footer-newsletter .wp-submitWrap .wpforms-field.wpforms-field-email {
+  width: 100%;
+}
+.site-footer .footer-newsletter .wp-submitWrap input {
   width: 100%;
   border: 0;
   border-radius: 4px 0 0 4px;
-  padding: 6px 24px;
+  padding: 10px 24px;
 }
-.footer__top .subs__form .btn__secondary {
+.site-footer .footer-newsletter .wp-submitWrap .btn__secondary {
   border-radius: 0 4px 4px 0;
   border: 0;
+  padding: 16px 32px;
 }
-.footer__main {
+.site-footer .footer-newsletter .wpforms-field-label {
+  display: none;
+}
+.site-footer .widget-title {
+  margin-bottom: 16px;
+}
+.site-footer__main {
   padding: 30px 0;
 }
-.footer__main__left {
+.site-footer__main .wp-block-group__inner-container {
   display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -6844,10 +6865,11 @@ h5 {
   flex-direction: column;
   gap: 24px;
 }
-.footer__main .footer__logo {
+.site-footer__main .wp-block-image {
   width: 160px;
+  margin: 0;
 }
-.footer__main .social-left {
+.site-footer__main .social-left {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -moz-flex-direction: column;
@@ -6858,17 +6880,17 @@ h5 {
   -moz-align-items: start;
   align-items: start;
 }
-.footer__main__downloads {
+.site-footer__main .footer__main__downloads {
   display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
-.footer__main__downloads .download__img {
+.site-footer__main .footer__main__downloads .download__img {
   width: 118px;
 }
-.footer__main .departments__list, .footer__main .services__list {
+.site-footer__main .menu-departments-container .menu, .site-footer__main .menu-services-container .menu {
   display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -6880,18 +6902,18 @@ h5 {
   flex-direction: column;
   gap: 20px;
 }
-.footer__main .departments__list .department, .footer__main .services__list .department, .footer__main .services__list .service {
+.site-footer__main .menu-departments-container .menu .department, .site-footer__main .menu-departments-container .menu .menu-services-container .service, .site-footer__main .menu-services-container .menu .department, .site-footer__main .menu-services-container .menu .service {
   color: #FFFFFF;
   margin-left: 8px;
   position: relative;
 }
-.footer__main .departments__list .department:hover, .footer__main .services__list .department:hover, .footer__main .services__list .service:hover {
+.site-footer__main .menu-departments-container .menu .department:hover, .site-footer__main .menu-departments-container .menu .menu-services-container .service:hover, .site-footer__main .menu-services-container .menu .department:hover, .site-footer__main .menu-services-container .menu .service:hover {
   color: #cde8ff;
 }
-.footer__main .departments__list .department:hover::after, .footer__main .services__list .department:hover::after, .footer__main .services__list .service:hover::after {
+.site-footer__main .menu-departments-container .menu .department:hover::after, .site-footer__main .menu-departments-container .menu .menu-services-container .service:hover::after, .site-footer__main .menu-services-container .menu .department:hover::after, .site-footer__main .menu-services-container .menu .service:hover::after {
   width: 100%;
 }
-.footer__main .departments__list .department::after, .footer__main .services__list .department::after, .footer__main .services__list .service::after {
+.site-footer__main .menu-departments-container .menu .department::after, .site-footer__main .menu-departments-container .menu .menu-services-container .service::after, .site-footer__main .menu-services-container .menu .department::after, .site-footer__main .menu-services-container .menu .service::after {
   content: "";
   position: absolute;
   bottom: -12%;
@@ -6902,7 +6924,7 @@ h5 {
   -webkit-transition: width 0.3s linear;
   transition: width 0.3s linear;
 }
-.footer__main .footer__schedule .card-schedule {
+.site-footer__main .footer__schedule .card-schedule {
   padding: 22px 0;
   background: transparent;
   -webkit-box-shadow: none;
@@ -6910,7 +6932,7 @@ h5 {
   min-height: auto;
   margin: 0;
 }
-.footer__main .footer__schedule .card-schedule .schedule {
+.site-footer__main .footer__schedule .card-schedule .schedule {
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
   -moz-flex-direction: row;
@@ -6918,7 +6940,7 @@ h5 {
   flex-direction: row;
 }
 @media screen and (min-width: 974px) {
-  .footer__main .footer__schedule .card-schedule .schedule {
+  .site-footer__main .footer__schedule .card-schedule .schedule {
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
     -moz-flex-direction: column;
@@ -6927,7 +6949,7 @@ h5 {
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__main .footer__schedule .card-schedule .schedule {
+  .site-footer__main .footer__schedule .card-schedule .schedule {
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
     -moz-flex-direction: row;
@@ -6935,19 +6957,19 @@ h5 {
     flex-direction: row;
   }
 }
-.footer__main .footer__schedule .btn__secondary {
+.site-footer__main .footer__schedule .btn__secondary {
   width: 100%;
   background: #EFF7FE;
 }
-.footer__main .footer__schedule .btn__secondary:hover {
+.site-footer__main .footer__schedule .btn__secondary:hover {
   background: #bfd6f3 !important;
   border-color: #bfd6f3 !important;
 }
-.footer__bottom {
+.site-footer__bottom {
   border-top: 1px solid #ECECEC;
   padding: 24px 0;
 }
-.footer__bottom .copy__right {
+.site-footer__bottom .copy-right {
   height: 100%;
   font-size: 14px;
   display: -webkit-box;
@@ -6959,7 +6981,7 @@ h5 {
   -moz-align-items: center;
   align-items: center;
 }
-.footer__bottom .social-link-con {
+.site-footer__bottom .social-link-con {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -moz-justify-content: start;
@@ -6967,7 +6989,7 @@ h5 {
   margin-top: 12px;
 }
 @media screen and (min-width: 767px) {
-  .footer__bottom .social-link-con {
+  .site-footer__bottom .social-link-con {
     margin-top: 0;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
