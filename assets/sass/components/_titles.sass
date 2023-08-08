@@ -2,6 +2,10 @@
     color: $primary-color
     padding-bottom: 8px
     text-transform: capitalize
+    @extend %bold
+    font-size: $base-font
+    +md 
+        font-size: $font-lg
     &-con 
         @extend %display-center
         +flex-dir(column)
@@ -12,4 +16,20 @@
         .center-heading 
             padding-bottom: 16px
             text-transform: capitalize
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                top: 100%
+                left: 50%
+                width: 100px
+                height: 6px
+                background-image: $gradient-color
+                transform: translateX(-50%)
+        .center-heading.start-heading
+            &::after
+                left: 0
+                transform: translateX(0%)
+
+
 

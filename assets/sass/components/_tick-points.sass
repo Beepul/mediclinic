@@ -2,7 +2,7 @@
     color: $text-gray
     +display-flex
     +flex-dir(column)
-    gap: 16px
+    gap: cal(16px - 4px)
     li 
         +display-flex
         gap: 12px
@@ -11,3 +11,4 @@
             content: url("../assets/icons/tick-mark.svg")
             height: 100%
             @extend %display-center
+            padding-top: 4px

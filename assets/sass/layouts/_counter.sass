@@ -3,9 +3,9 @@
     padding: 70px 0
     color: $primary-color
     .counter-con
-        @extend %display-center
+        // @extend %display-center
         margin-bottom: $padding-md
-        +lg 
+        +xl
             margin-bottom: 0
         &:not(:last-child)
             position: relative
@@ -23,12 +23,27 @@
     .counter-con:nth-child(2)
         &::after
             display: none
-            +lg 
+            +xl
                 display: block
     .counter
+        // flex: 1
         +display-flex
         +align-items(center)
-        gap: $gap-sm
+        gap: $base-gap
+        +sm
+            gap: 100px
+        +md 
+            gap: $gap-md
+        
+        .counter-icon,.counter-text
+            flex: 1
+        .counter-icon 
+            +display-flex
+            +flex-just(center)
+            +sm
+                +flex-just(end)
+        
         p
             @extend %uppercase
             font-size: $font-md
+        

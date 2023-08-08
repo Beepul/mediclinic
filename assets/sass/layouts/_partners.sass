@@ -1,8 +1,12 @@
 .partners
     padding: 60px 0
-    .partners__logo__wrapper
-        +display-flex
-        +align-items(center)
-        +flex-just(space-between)
-        .partner__logo
-            width:195px
+    .partner__logo
+        @extend %display-center
+        img
+            // width: 50%
+            min-height: 72px
+            height: 80px
+            max-height: 94px
+            object-fit: contain
+            +md 
+                object-fit: cover

@@ -8,9 +8,9 @@ const closeNotifyH5 = document.querySelector('#close__notification__h5');
 const hamBarsEl = document.querySelector('#ham-bars');
 const sideBarEl = document.querySelector('.side__bar');
 const sideBarCloseBtn = document.querySelector('#close__btn');
-// Price
-const priceBtnEl = document.querySelectorAll('#price-btns');
-const pricingEl = document.querySelectorAll('#pricing');
+// // Price
+// const priceBtnEl = document.querySelectorAll('#price-btns');
+// const pricingEl = document.querySelectorAll('#pricing');
 // Accordion
 const accordionHeaders = document.querySelectorAll('.accordion-header');
 const accordionContents = document.querySelectorAll('.accordion-content');
@@ -39,59 +39,19 @@ const scrollTopEl = document.querySelector('.scroll__top');
 
 
 // Accordion
-const handleAccordion = (clickedheader,index) => {
-  accordionHeaders.forEach((header) => {
-    if(clickedheader === header){
-      header.classList.toggle('active')
-    }else{
-      header.classList.remove('active')
+const handleAccordion = (index) => {
+  accordionContents.forEach((content, i) => {
+    if (index === i) {
+      content.classList.toggle("active");
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+      accordionHeaders[i].classList.toggle("active");
+    } else {
+      content.style.maxHeight = null;
+      content.classList.remove("active");
+      accordionHeaders[i].classList.remove("active");
     }
-  })
-  accordionContents.forEach((content,i) => {
-    if(index === i){
-      content.classList.toggle("active")
-    }else{
-      content.classList.remove('active')
-    }
-  })
-}
-
-
-
-
-// // Accordion
-// accordionHeaders.forEach((header, index) => {
-//   header.addEventListener('click', function () {
-//     // Remove 'active' class from all other accordion headers
-//     accordionHeaders.forEach((otherHeader) => {
-//       if (otherHeader !== header) {
-//         otherHeader.classList.remove('active');
-//       }
-//     });
-
-//     // Remove 'active' class from all other accordion contents
-//     accordionContents.forEach((content) => {
-//       if (content !== this.nextElementSibling) {
-//         content.style.display = 'none';
-//       }
-//     });
-
-//     this.classList.toggle('active');
-//     const content = this.nextElementSibling;
-
-//     if (content.style.display === 'block') {
-//       content.style.display = 'none';
-//     } else {
-//       content.style.display = 'block';
-//     }
-//   });
-
-//   if (index === 0) {
-//     header.classList.add('active');
-//     accordionContents[index].style.display = 'block';
-//   }
-// });
-
+  });
+};
 
 // Notification Toggle
 const closeNotification = () => {
@@ -113,21 +73,6 @@ const handleSideBar = () => {
 const handleCloseSideBar = (e) => {
   if(e.target === sideBarEl || e.target === sideBarCloseBtn){
     sideBarEl.classList.toggle('active')
-  }
-}
-
-// Price buttom and View Toggle
-const handlePrice = (e) => {
-  if(e.target === priceBtnEl[0]){
-    priceBtnEl[0].classList.add('active')
-    priceBtnEl[1].classList.remove('active')
-    pricingEl[0].classList.add('active')
-    pricingEl[1].classList.remove('active')
-  }else{
-    priceBtnEl[1].classList.add('active')
-    priceBtnEl[0].classList.remove('active')
-    pricingEl[1].classList.add('active')
-    pricingEl[0].classList.remove('active')
   }
 }
 
@@ -379,15 +324,14 @@ window.addEventListener('load', function(){
   hamBarsEl?.addEventListener('click', handleSideBar)
   sideBarEl?.addEventListener('click',handleCloseSideBar)
 
-  // Price Buttons
-  priceBtnEl.forEach(btn => {
-    btn.addEventListener('click',handlePrice)
-  })
 
   // Accordion
-  accordionHeaders.forEach((header,index) => {
-    header.addEventListener('click', () => handleAccordion(header,index))
-  })
+  accordionHeaders.forEach((header, index) => {
+    header.addEventListener("click", () => handleAccordion(index));
+  });
+  // Set the first accordion item as active by default
+  handleAccordion(0);
+
   
 
   // custom select options

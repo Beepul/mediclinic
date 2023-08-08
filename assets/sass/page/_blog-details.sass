@@ -38,10 +38,15 @@
                     img 
                         object-fit: cover
                 .main-points
+                    padding: 0 24px
+                    +display-flex
+                    +flex-dir(column)
+                    gap: 16px
                     li
                         +display-flex
                         +align-items(center)
                         gap: 12px
+                        color: $text-gray
                         &::before
                             content: " "
                             background-image: url("../assets/icons/tick-mark.png")

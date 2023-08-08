@@ -55,7 +55,7 @@
                 .menu-item.menu-item-has-children
                     position: relative
                     svg
-                        margin-top: 3px
+                        padding-top: 2px
                         path
                             +transition(0.3s ease)
                     &::after
@@ -187,6 +187,9 @@
                     fill: $primary-color-100
             path
                 fill: $primary-color
+    .social-link-con
+        .social-link
+            background-color: $secondary-color-100 !important
     .header-mid
         background: $primary-color
         padding: $padding-lg 0
@@ -294,6 +297,20 @@
             display: none 
             +md 
                 +display-flex
+            .social-link
+                background-color: $secondary-color-100 !important
+            .social-link.share-link
+                border-radius: 0 
+                background-color: $white-color !important
+                span,path
+                    +transition(.3s ease-in-out)
+                &:hover
+                    svg
+                        transform: scale(1)
+                        path
+                            fill: $sky-blue
+                    span
+                        color: $sky-blue
         .site-branding
                 height: 100%
                 @extend %display-center
@@ -378,6 +395,19 @@
         +md
             padding: $base-padding 0
         .social-link-con
+            .social-link.share-link
+                border-radius: 0 
+                background-color: $primary-color !important
+                span,path
+                    +transition(.3s ease-in-out)
+                &:hover
+                    svg
+                        transform: scale(1)
+                        path
+                            fill: $secondary-color-200
+                    span
+                        color: $secondary-color-200
+        .social-link-con
             float: left
             display: none
             +lg   
@@ -461,8 +491,5 @@
         float: right !important 
         +sm 
             display: flex !important
-        .social-link
-            border-radius: 0
-            img
-                width: 20px !important
+           
                 

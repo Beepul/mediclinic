@@ -46,7 +46,7 @@
             +display-flex
             +align-items(center)
             flex-wrap: wrap
-            +sm 
+            +md
                 gap: 16px
             li
                 +display-flex
@@ -54,6 +54,10 @@
                 gap: 4px
                 a
                     color: $white-color
+                    +transition(.3s ease-in-out)
+                &:hover
+                    a
+                        color: $primary-color-100
             li:not(:last-child)
                 &::after
                     content: url("../assets/icons/arrow-r.svg")

@@ -43,6 +43,7 @@
             grid-template-columns: 1fr
 
 
+
 .banner-five-carousel
     position: relative
     .owl-dots
@@ -93,7 +94,7 @@
             +display-flex
             height: 100%
             +align-items(end)
-            p
+            span
                 flex: 1
                 @extend %display-center
                 color: $white-color
@@ -111,3 +112,7 @@
             grid-template-columns: 1fr 1fr
         +breakpoint(768px)
             grid-template-columns: 1fr 
+
+.team-carousel
+    .owl-dots
+        margin-top: 0 !important

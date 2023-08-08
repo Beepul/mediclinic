@@ -12,13 +12,30 @@
         padding-bottom: 32px
         color: $text-gray
     &-info
-        +display-flex
-        +align-items(center)
-        gap: $base-padding
-        p
-            @extend %bold
+        .card-info-icon
+            +display-flex
+            +align-items(center)
+            gap: $base-padding
+            +transition(.3s ease-in-out)
+            .icon
+                background-color: $secondary-color
+                @extend %display-center
+                +radius(50%)
+                height: 50px
+                width: 50px
+            path,svg
+                +transition(.3s ease-in-out)
+            &:hover
+                color: $primary-color-100
+                path
+                    fill: $primary-color-100 !important
+                svg
+                    transform: scale(1.2)
+            span
+                @extend %bold
     &-img 
         width: 50px
+    
     &-read-more
         +display-flex
         +align-items(center)
@@ -64,16 +81,8 @@
     margin: 50px 10px
     &-desc
         color: $text-gray
-    &-points
-        li
-            +display-flex
-            +align-items(center)
-            gap: 12px
-            padding-top: 16px
-            color: $text-gray
-            .tick
-                width: 16px
-                height: 16px
+    .tick-points
+        gap: 16px
     .btn-primary
         width: 180px
         margin-top: 16px
@@ -84,6 +93,8 @@
         @extend .base-card
         padding: 0
         margin: 50px 10px
+        .social-link
+            background-color: $secondary-color-100 !important
     &-profile
         height: 380px
         +radius(4px)
@@ -136,9 +147,17 @@
             li
             padding-top: 16px
             color: $text-gray
-            .tick
-                width: 16px
-                margin-right: 12px
+            .price-point
+                +display-flex
+                gap: 9px
+                &::before
+                    content: url("../assets/icons/tick-mark.svg")
+                    padding-top: 3px
+            .price-point.exclude
+                &::before
+                    content: url("../assets/icons/cross.svg")
+
+            
 .pricing-card.active
     background: $primary-color
     color: $white-color
@@ -170,6 +189,9 @@
             color: $white-color
     .pricing-plan-points
         color: $white-color
+        .price-point
+            &::before
+                content: url("../assets/icons/tick-mark-white.svg")
     .btn-primary
         background: $white-color
         color: $primary-color
@@ -352,6 +374,7 @@
     min-height: auto
     .category-heading
         color: $primary-color
+        @extend %bold
     .categories
         +display-flex
         +flex-dir(column)
@@ -367,8 +390,8 @@
                 +flex-just(space-between)
                 color: $text-gray
             &::before
-                content: ">"
-                color: $text-gray
+                content: url('../assets/icons/gte-arrow.svg')
+                // color: $text-gray
         li:not(:last-child)
             padding-bottom: 20px
             border-bottom: 1px solid $border-gray
@@ -408,6 +431,7 @@
     min-height: auto
     .card-heading
         color: $primary-color
+        @extend %bold
     .card-body
         +display-flex
         gap: 16px

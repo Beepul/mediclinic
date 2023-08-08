@@ -21,13 +21,20 @@
         &::before 
             content: url(../assets/icons/minus.svg)
     .accordion-content 
+        max-height: 0
         overflow: hidden
-        height: 0
-        background: $white-color
-        color: $text-gray
-        border-radius: 0 0 4px 4px
-        +transition(height 0.4s linear)
+        transition: max-height 0.3s ease-out
+        // overflow: hidden
+        // height: 0
+        // background: $white-color
+        // color: $text-gray
+        // border-radius: 0 0 4px 4px
+        // +transition(height 0.4s linear)
         .accordion-body
             padding: 20px
-    .accordion-content.active
-        height: 120px
+    // .accordion-content.active
+    //     height: 170px
+    //     +md 
+    //         height: 100px
+    //     +lg 
+    //         height: 120px

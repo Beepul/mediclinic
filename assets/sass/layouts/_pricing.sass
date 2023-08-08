@@ -1,29 +1,11 @@
 .pricing
-    padding: 100px 0
+    padding: 50px 0
+    +md 
+        padding: $container-top-bottom-padding 0
     &-con 
         +display-flex
         +flex-dir(column)
         gap: $base-gap
-    &__wrapper
-        position: relative
-        overflow: hidden
-        height: 2150px
-        +sm 
-            height: 1950px
-        +md 
-            height: 1900px
-        +lg 
-            height: 700px 
-
-        .pricing-card-con
-            min-width: 100%
-            position: absolute
-            inset: 0
-            transform: translateX(-105%)
-            transition: transform 0.4s linear
-            padding: 0 20px
-        .pricing-card-con.active
-            transform: translateX(0)
     &-btns-con 
         @extend %display-center
     &-btns 
@@ -39,5 +21,7 @@
         .active
             background: $white-color
             color: $primary-color
+    .pricing-card
+        margin: 10px
     .center-heading
         text-align: center
