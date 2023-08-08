@@ -91,7 +91,7 @@ $(document).ready(function() {
 	$('.partner-carousel').owlCarousel({
 		items: 3,
 		margin: 28,
-		dots: false,
+		dots: true,
 		responsive: {
 			0: {
 				items: 2

@@ -6058,7 +6058,7 @@ h5 {
   color: #13297E;
 }
 .counter-section .counter-con {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 @media screen and (min-width: 1200px) {
   .counter-section .counter-con {
@@ -6100,7 +6100,7 @@ h5 {
   -ms-flex-align: center;
   -moz-align-items: center;
   align-items: center;
-  gap: 48px;
+  gap: 24px;
 }
 @media screen and (min-width: 480px) {
   .counter-section .counter {
@@ -6798,6 +6798,17 @@ h5 {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+.partners .owl-dots {
+  margin-top: 30px;
+}
+.partners .owl-dots .owl-dot {
+  height: 12px;
+  width: 12px;
+}
+.partners .owl-dots .owl-dot.active {
+  height: 14px;
+  width: 14px;
 }
 
 .site-footer {
@@ -7699,6 +7710,9 @@ h5 {
 }
 .about-us .working-process .center-title-con {
   margin-bottom: 48px;
+}
+.about-us .working-process .center-title-con .center-heading {
+  text-align: center;
 }
 
 .testimonials-page .testimonials {
