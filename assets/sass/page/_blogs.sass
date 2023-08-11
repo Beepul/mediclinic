@@ -1,18 +1,21 @@
-.blog-archive-page
-    .inner-page-banner
-        margin-bottom: 0
-        +lg 
-            margin-bottom: $container-top-bottom-padding
-
-    .blogs-archive-wrapper
-        margin-bottom: 0
-        +lg 
-            margin-bottom: $container-top-bottom-padding
-        .blogs-aside
+.blog
+    .content-area
+        margin-bottom: 50px
+        #secondary.widget-area
             +display-flex
             +flex-dir(column)
             gap: 50px
-        .main-blogs
-            +display-flex
-            gap: 48px 
-            flex-wrap: wrap
+            padding-top: 20px
+            .wp-block-group
+                @extend .base-card
+                min-height: auto
+                .wp-block-group__inner-container
+                    +display-flex
+                    +flex-dir(column)
+                    gap: 24px
+                .wp-block-heading
+                    font-size: 20px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 160%
+                    color: $primary-color

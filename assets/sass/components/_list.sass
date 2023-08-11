@@ -1,0 +1,61 @@
+.wp-block-categories-list.wp-block-categories
+    +display-flex
+    +flex-dir(column)
+    gap: 20px
+    li,.cat-item
+        +display-flex
+        gap: 12px
+        +align-items(center)
+        a 
+            +display-flex
+            width: 100%
+            +align-items(center)
+            +flex-just(space-between)
+            color: $text-gray
+        &::before
+            content: url('../assets/icons/gte-arrow.svg')
+            // color: $text-gray
+    li:not(:last-child)
+        padding-bottom: 20px
+        border-bottom: 1px solid $border-gray
+
+.wp-block-latest-posts__list.wp-block-latest-posts
+    +display-flex
+    +flex-dir(column)
+    gap: 24px
+    li:not(:last-child)
+        +border-btm($border-gray)
+    a
+        +display-flex
+        +flex-dir(column)
+        gap: 16px
+        .post-title
+            font-size: 16px
+            @extend %bold
+        .post-date
+            color: $text-gray 
+            +display-flex
+            +align-items(center)
+            gap: 12px
+            font-size: 14px
+            padding-bottom: 24px
+        svg,.separator
+            @extend %display-center   
+    li:last-child
+        .post-date
+            padding-bottom: 0
+
+.wp-block-tags-list.wp-block-tags
+    +display-flex
+    flex-wrap: wrap
+    gap: 16px
+    li 
+        a
+            padding: 4px 16px
+            border: 1px solid $border-gray
+            +radius(4px)
+            color: $text-gray
+            +transition(0.3s ease-in-out)
+
+.wp-block-archives-list.wp-block-archives
+    @extend .wp-block-categories-list, .wp-block-categories

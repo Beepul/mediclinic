@@ -1,64 +1,74 @@
-.blog-details-page
-    .inner-page-banner
-        margin-bottom: 0
-        +lg 
-            margin-bottom: $container-top-bottom-padding
-    .blog-details-wrapper
-        margin-bottom: 0
-        +lg 
-            margin-bottom: $container-top-bottom-padding
-        .blog-aside
-            +display-flex
-            +flex-dir(column)
-            gap: 50px
-        .main-blog
-            +display-flex
-            +flex-dir(column)
-            gap: 50px
-            .article__card
-                max-width: 100%
-                box-shadow: none
-                .article__img
-                    +radius(0)
-                .article__body
-                    padding: 24px 0 0 0
-                .article__body__bottom
-                    +display-flex
+.single.single-post
+    @extend .blog
+
+.single.single-post
+    .content-area,#primary
+        .site-main
+            .post
+                +display-flex 
+                +flex-dir(column)
+                .post-image
+                    +display-flex 
                     +flex-dir(column)
                     gap: 24px
-            &-item
-                +display-flex
-                +flex-dir(column)
-                gap: 32px
-                .main-desc
-                    color: $text-gray
-                .main-img
-                    max-height: 450px
-                    overflow: hidden
-                    img 
-                        object-fit: cover
-                .main-points
-                    padding: 0 24px
-                    +display-flex
-                    +flex-dir(column)
-                    gap: 16px
-                    li
-                        +display-flex
+                .entry-header,header 
+                    +display-flex 
+                    +align-items(center)
+                    padding-bottom: 16px 
+                    +border-btm($border-gray)
+                    .entry-meta
+                        margin: 0
+                        .blog__date
+                            position: relative
+                            &::after
+                                content: ""
+                                position: absolute
+                                top: 50%
+                                bottom: 0
+                                right: 0
+                                width: 1.5px 
+                                height: 70%
+                                transform: translateY(-50%)
+                                background-color: $border-gray
+                            a
+                                @extend %semi-bold 
+                                color: $primary-color
+                                +display-flex 
+                                +align-items(center)
+                                gap: 8px
+                                &:hover 
+                                    color: $primary-color-100
+                                    path
+                                        fill: $primary-color-100
+                                span
+                                    @extend %display-center
+
+                    .category-wrap
+                        +display-flex 
                         +align-items(center)
-                        gap: 12px
-                        color: $text-gray
-                        &::before
-                            content: " "
-                            background-image: url("../assets/icons/tick-mark.png")
-                            background-size: 16px
-                            background-repeat: no-repeat
-                            background-position: center
-                            width: 16px
-                            height: 16px
-                            display: block
-                .main-content
-                    +display-flex
+                        gap: 24px
+                        a
+                            color: $primary-color
+                            @extend %semi-bold 
+
+                        .category-list:not(:last-child)
+                            position: relative
+                            &::after
+                                content: ""
+                                position: absolute
+                                top: 50%
+                                bottom: 0
+                                right: -12px
+                                width: 1.5px 
+                                height: 60%
+                                transform: translateY(-50%)
+                                background-color: $border-gray
+                .entry-content
+                    +display-flex 
                     +flex-dir(column)
-                    .sub-heading
-                        margin-bottom: 16px
-                    
+                    p
+                        word-break: break-word
+                    h1,h2,h3,h4,h5
+                        color: $black-color !important
+                    img 
+                        margin-bottom: 16px 

@@ -1797,30 +1797,90 @@
                             </article>
                             <div class="appointment-form">
                                 <span>Booking</span>
-                                <form>
-                                    <input type="text" placeholder="Full Name" required />
-                                    <input type="email" placeholder="Email" required />
-                                    <div class="appointment-form-phoneandselect">
-                                        <input type="tel" placeholder="Phone Number" />
-                                        <div class="custom-select">
-                                            <label class="select-text">Select Departments</label>
-                                            <ul class="select-options">
-                                                <li>Department 1</li>
-                                                <li>Department 2</li>
-                                                <li>Department 3</li>
-                                            </ul>
+                                <div class="wpcf7 js" lang="en-US" dir="ltr">
+                                    <div class="screen-reader-response">
+                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                        <ul></ul>
+                                    </div>
+                                    <form method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                        <div style="display: none;">
+                                            <input type="hidden" name="_wpcf7" value="859">
+                                            <input type="hidden" name="_wpcf7_version" value="5.8">
+                                            <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f859-o1">
+                                            <input type="hidden" name="_wpcf7_container_post" value="0">
+                                            <input type="hidden" name="_wpcf7_posted_data_hash" value>
                                         </div>
-                                    </div>
-                                    <div class="appointment-form-dateandtime">
-                                        <input type="date" placeholder="Date" />
-                                        <input type="time" placeholder="Time" />
-                                    </div>
-                                    <div class="appointment-form-confirm">
-                                        <input type="checkbox" />
-                                        <p>I agree that my submitted date is being collected and stored</p>
-                                    </div>
-                                    <button class="btn-primary" type="submit">Submit Now</button>
-                                </form>
+                                        <div class="row gap-1">
+                                            <div class="col-12-xs">
+                                                <p>
+                                                    <label>
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-fullname">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Full Name" aria-required="true" aria-invalid="false" value type="text" name="your-fullname">
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-12-xs">
+                                                <p>
+                                                    <label>
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-email">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Email" aria-required="true" aria-invalid="false" value type="text" name="your-email">
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-6-lg col-12-xs">
+                                                <p>
+                                                    <label>
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-phone">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Phone Number" aria-required="true" aria-invalid="false" value type="text" name="your-phone">
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-6-lg col-12-xs">
+                                                <p>
+                                                    <label>
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-subject">
+                                                            <div class="custom-select">
+                                                                <label class="select-text">Select Departments</label>
+                                                                <ul class="select-options">
+                                                                    <li>Department 1</li>
+                                                                    <li>Department 2</li>
+                                                                    <li>Department 3</li>
+                                                                </ul>
+                                                            </div>
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-6-lg col-12-xs">
+                                                <p>
+                                                    <label>
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-date">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value type="date" name="your-date">
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-6-lg col-12-xs">
+                                                <p>
+                                                    <label>
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-time">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value type="time" name="your-time">
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Submit Now">
+                                            <span class="wpcf7-spinner"></span>
+                                        </p>
+                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                    </form>
+                                </div>
 
                             </div>
                         </div>

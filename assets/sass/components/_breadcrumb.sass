@@ -1,36 +1,36 @@
-.inner-page-banner
-
-    .banner-top
-        min-height: 250px
-        background-image: url("../assets/images/breadcrumb.jpg")
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: center
-        +display-flex
-        +flex-dir(column)
-        +flex-just(center)
-        .heading
-            color: $white-color
-            position: relative
-            font-size: $heading-lg
-            +sm 
-                font-size: $heading-xl
-            +md
-                font-size: $heading-xxl
-
-            &::after
-                content: ""
-                height: 6px 
-                width: 100px
-                background: $gradient-color
-                position: absolute
-                top: 100%
-                left: 0
-    .banner-right-wrap
-        +display-flex
-        +align-items(center)
+.breadcrumb-wrapper
+    min-height: 250px
+    background-image: url("../assets/images/breadcrumb.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    +display-flex
+    +flex-dir(column)
+    +flex-just(center)
+    margin-bottom: 50px
+    header.entry-header
+        color: $white-color
+        position: relative
+        font-size: $heading-lg
+        @extend %bold
+        +sm 
+            font-size: $heading-xl
+        +md
+            font-size: $heading-xxl
+        &::after
+            content: ""
+            height: 6px 
+            width: 100px
+            background: $gradient-color
+            position: absolute
+            top: 100%
+            left: 0
+    #crumbs
         height: 100%
+        +display-flex 
+        +align-items(center)
         +flex-just(start)
+        flex-wrap: wrap
         margin-top: 18px
         gap: 6px
         +sm 
@@ -39,49 +39,16 @@
         +md 
             margin-top: 0
             +flex-just(end)
-        .home-logo
+    #crumbs>span
+        +display-flex 
+        +align-items(center)
+        gap: 16px
+        gap: 6px
+        +sm 
+            gap: 16px
+        a 
+            color: $white-color
+        .separator
             @extend %display-center
-        .navigation
-            gap: 6px
-            +display-flex
-            +align-items(center)
-            flex-wrap: wrap
-            +md
-                gap: 16px
-            li
-                +display-flex
-                +align-items(center)
-                gap: 4px
-                a
-                    color: $white-color
-                    +transition(.3s ease-in-out)
-                &:hover
-                    a
-                        color: $primary-color-100
-            li:not(:last-child)
-                &::after
-                    content: url("../assets/icons/arrow-r.svg")
-                    padding-top: 8px
-            
-    .banner-bottom
-        background: $secondary-color
-        padding: 12px 0
-        .banner-btm-wrap
-            +display-flex
-            gap: 8px
-            .home-logo
-                +display-flex
-                +flex-dir(column)
-                +flex-just(center)
-            .navigation
-                +display-flex
-                gap: 8px
-                flex-wrap: wrap
-                li
-                    cursor: pointer
-                    a
-                        color: $primary-color
-                li:not(:last-child)
-                    &::after
-                        content: "/"
-                        padding-left: 8px
+            path 
+                fill: $white-color

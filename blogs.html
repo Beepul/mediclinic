@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="blog-archive-page layout-1">
+<body class="blog rightsidebar blog-archive-page layout-1">
     <div id="page" class="site">
          <!-- header start -->
          <header id="masthead" class="site-header">
@@ -462,288 +462,358 @@
             <!-- navbar-end -->
         </header>
         <!-- header end -->
-        <!-- inner page banner start -->
-        <div class="inner-page-banner">
-            <div class="banner-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6-md col-12-xs">
-                            <h1 class="heading">Blog Archive</h1>
-                        </div>
-                        <div class="col-6-md col-12-xs">
-                            <div class="banner-right-wrap">
-                                <span class="home-logo">
+        <!-- breadcrumb start -->
+        <div class="breadcrumb-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6-md col-12-xs">
+                        <header class="entry-header">
+                            <span class="page-title">Blog Archive</span>
+                        </header>
+                    </div>
+                    <div class="col-6-md col-12-xs">
+                        <div id="crumbs">
+                            <span>
+                                <span class="separator">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
                                         <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="#fff" />
                                     </svg>
                                 </span>
-                                <ul class="navigation">
-                                    <li>
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Pages</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Blog Archive</a>
-                                    </li>
-                                </ul>
-                            </div>
+                                <a href="https://rayatradings.com.np/mediclinic/">
+                                    <span itemprop="name">Home</span>
+                                </a>
+                                <span class="separator">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="chevron">
+                                        <path id="Vector" d="M6.69704 4.38043L10.4426 7.95592C10.524 8.03364 10.5816 8.11785 10.6152 8.20853C10.6494 8.29921 10.6665 8.39637 10.6665 8.50001C10.6665 8.60365 10.6494 8.70081 10.6152 8.79149C10.5816 8.88217 10.524 8.96638 10.4426 9.04411L6.69704 12.6196C6.54776 12.7621 6.35777 12.8333 6.12706 12.8333C5.89636 12.8333 5.70637 12.7621 5.55709 12.6196C5.40781 12.4771 5.33317 12.2957 5.33317 12.0755C5.33317 11.8553 5.40781 11.6739 5.55709 11.5314L8.73266 8.50001L5.55709 5.46862C5.40781 5.32612 5.33317 5.14475 5.33317 4.92453C5.33317 4.7043 5.40781 4.52293 5.55709 4.38043C5.70637 4.23793 5.89636 4.16668 6.12706 4.16668C6.35777 4.16668 6.54776 4.23793 6.69704 4.38043Z" fill="white"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </span>
+                            <span>
+                                <a href="https://rayatradings.com.np/mediclinic/">
+                                    <span itemprop="name">Pages</span>
+                                </a>
+                                <span class="separator">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="chevron">
+                                        <path id="Vector" d="M6.69704 4.38043L10.4426 7.95592C10.524 8.03364 10.5816 8.11785 10.6152 8.20853C10.6494 8.29921 10.6665 8.39637 10.6665 8.50001C10.6665 8.60365 10.6494 8.70081 10.6152 8.79149C10.5816 8.88217 10.524 8.96638 10.4426 9.04411L6.69704 12.6196C6.54776 12.7621 6.35777 12.8333 6.12706 12.8333C5.89636 12.8333 5.70637 12.7621 5.55709 12.6196C5.40781 12.4771 5.33317 12.2957 5.33317 12.0755C5.33317 11.8553 5.40781 11.6739 5.55709 11.5314L8.73266 8.50001L5.55709 5.46862C5.40781 5.32612 5.33317 5.14475 5.33317 4.92453C5.33317 4.7043 5.40781 4.52293 5.55709 4.38043C5.70637 4.23793 5.89636 4.16668 6.12706 4.16668C6.35777 4.16668 6.54776 4.23793 6.69704 4.38043Z" fill="white"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="current">
+                                <a href="https://rayatradings.com.np/mediclinic/">
+                                    <span itemprop="name">Blog Archive</span>
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- inner page banner end -->
-        <section class="blogs-archive-wrapper">
+        <!-- breadcrumb end -->
+<!-- blog start -->
+        <div class="content-area" id="primary">
             <div class="container">
                 <div class="row gap-2">
                     <div class="col-4-lg col-12-xs order-2-xs">
-                        <aside class="blogs-aside">
-                            <section class="blogs-aside-item">
-                                <form class="input-btn">
-                                    <input type="text" required placeholder="Enter the keywords.." />
-                                    <button class="btn-primary">Search Now</button>
+                        <aside id="secondary" class="widget-area">
+                            <section class="widget widget_block widget_search">
+                                <form role="search" method="get" class="wp-block-search">
+                                    <label class="wp-block-search__label" for="wp-block-search__input-1">Search Now</label>
+                                    <div class="wp-block-search__inside-wrapper ">
+                                        <input class="wp-block-search__input" id="wp-block-search__input-1" placeholder="Enter the keywords..." value type="search" name="s" required />
+                                        <button aria-label="Search" class="wp-block-search__button wp-element-button" type="submit">Search Now</button>
+                                    </div>
                                 </form>
                             </section>
-                            <section class="blogs-aside-item">
-                                <div class="category-card">
-                                    <span class="category-heading">Categories</span>
-                                    <ul class="categories">
-                                        <li><a href="#"><span>Cancer Treatment</span><span>(1)</span></a></li>
-                                        <li><a href="#"><span>Physiotherapy</span><span>(3)</span></a></li>
-                                        <li><a href="#"><span>Neurology</span><span>(3)</span></a></li>
-                                        <li><a href="#"><span>Dental Clinic</span><span>(3)</span></a></li>
-                                        <li><a href="#"><span>Old Age Caregivers</span><span>(3)</span></a></li>
-
-                                    </ul>
+                            <section class="widget widget_block">
+                                <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                                    <div class="wp-block-group__inner-container">
+                                        <span class="wp-block-heading">Categories</span>
+                                        <ul class="wp-block-categories-list wp-block-categories">
+                                            <li class="cat-item">
+                                                <a href="#">
+                                                    <span>Cancer Treatment</span>
+                                                    <span>(1)</span>
+                                                </a>
+                                            </li>
+                                            <li class="cat-item">
+                                                <a href="#">
+                                                    <span>Physiotherapy</span>
+                                                    <span>(3)</span>
+                                                </a>
+                                            </li>
+                                            <li class="cat-item">
+                                                <a href="#">
+                                                    <span>Neurology</span>
+                                                    <span>(3)</span>
+                                                </a>
+                                            </li>
+                                            <li class="cat-item">
+                                                <a href="#">
+                                                    <span>Dental Clinic</span>
+                                                    <span>(3)</span>
+                                                </a>
+                                            </li>
+                                            <li class="cat-item">
+                                                <a href="#">
+                                                    <span>Old Age Caregivers</span>
+                                                    <span>(3)</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </section>
-                            <section class="blogs-aside-item">
-                                <div class="recent-blog-card">
-                                    <span class="card-heading">Recent Blogs</span>
-                                    <ul class="card-body">
-                                        <li class="blog-item">
-                                            <p class="blog-heading">Link between youth, drugs & death?</p>
-                                            <p class="blog-date">Feb 10, 2023 <span><svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
-                                                <circle cx="2" cy="2" r="2" fill="#606060"/>
-                                              </svg></span> Medicine, Antibiotic</p>
-                                        </li>
-                                        <li class="blog-item">
-                                            <p class="blog-heading">What is cardiology?</p>
-                                            <p class="blog-date">Feb 10, 2023 <span><svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
-                                                <circle cx="2" cy="2" r="2" fill="#606060"/>
-                                              </svg></span> Medicine, Antibiotic</p>
-                                        </li>
-                                        <li class="blog-item">
-                                            <p class="blog-heading">Is lung cancer curable?</p>
-                                            <p class="blog-date">Feb 10, 2023 <span><svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
-                                                <circle cx="2" cy="2" r="2" fill="#606060"/>
-                                              </svg></span> Medicine, Antibiotic</p>
-                                        </li>
-                                    </ul>
+                            <section class="widget widget_block">
+                                <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                                    <div class="wp-block-group__inner-container">
+                                        <span class="wp-block-heading">Recent Blogs</span>
+                                        <ul class="wp-block-latest-posts__list wp-block-latest-posts">
+                                            <li>
+                                                <a href="#">
+                                                    <p class="post-title">Link between youth, drugs & death?</p>
+                                                    <p class="post-date">
+                                                        <span>Feb 10, 2023</span> 
+                                                        <span class="separator">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
+                                                                <circle cx="2" cy="2" r="2" fill="#606060"></circle>
+                                                            </svg>
+                                                        </span>
+                                                        <span>Medicine, Antibiotic</span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <p class="post-title">Link between youth, drugs & death?</p>
+                                                    <p class="post-date">
+                                                        <span>Feb 10, 2023</span> 
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
+                                                                <circle cx="2" cy="2" r="2" fill="#606060"></circle>
+                                                            </svg>
+                                                        </span>
+                                                        <span>Medicine, Antibiotic</span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <p class="post-title">Link between youth, drugs & death?</p>
+                                                    <p class="post-date">
+                                                        <span>Feb 10, 2023</span> 
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
+                                                                <circle cx="2" cy="2" r="2" fill="#606060"></circle>
+                                                            </svg>
+                                                        </span>
+                                                        <span>Medicine, Antibiotic</span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </section>
-                            <section class="blogs-aside-item">
-                                <div class="tags-card">
-                                    <span class="card-heading">Tags</span>
-                                    <ul class="card-body">
-                                        <li><a href="#">Surgeon</a></li>
-                                        <li><a href="#">Health</a></li>
-                                        <li><a href="#">Dental</a></li>
-                                        <li><a href="#">Surgeon</a></li>
-                                        <li><a href="#">Caregivers</a></li>
-                                        <li><a href="#">Surgery</a></li>
-                                    </ul>
+                            <section class="widget widget_block">
+                                <div class="wp-block-group widget_tags is-layout-flow wp-block-group-is-layout-flow">
+                                    <div class="wp-block-group__inner-container">
+                                        <span class="wp-block-heading">Tags</span>
+                                        <ul class="wp-block-tags-list wp-block-tags">
+                                            <li><a href="#">Surgeon</a></li>
+                                            <li><a href="#">Health</a></li>
+                                            <li><a href="#">Dental</a></li>
+                                            <li><a href="#">Surgeon</a></li>
+                                            <li><a href="#">Caregivers</a></li>
+                                            <li><a href="#">Surgery</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </section>
-                            <section class="blogs-aside-item">
-                                <div class="aside-contact-card">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <h4 class="heading">Have Any Questions ? Call Us Now.</h4>
-                                            <div class="contact">
-                                                <span>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                                                        <path d="M23.8333 18.0833C22.4333 18.0833 20.9167 17.85 19.6333 17.3833H19.2833C18.9333 17.3833 18.7 17.5 18.4667 17.7333L15.9 20.3C12.6333 18.55 9.83333 15.8667 8.2 12.6L10.7667 10.0333C11.1167 9.68333 11.2333 9.21667 11 8.86667C10.65 7.58333 10.4167 6.06667 10.4167 4.66667C10.4167 4.08333 9.83333 3.5 9.25 3.5H5.16667C4.58333 3.5 4 4.08333 4 4.66667C4 15.6333 12.8667 24.5 23.8333 24.5C24.4167 24.5 25 23.9167 25 23.3333V19.25C25 18.6667 24.4167 18.0833 23.8333 18.0833ZM6.33333 5.83333H8.08333C8.2 6.88333 8.43333 7.93333 8.66667 8.86667L7.26667 10.2667C6.8 8.86667 6.45 7.35 6.33333 5.83333ZM22.6667 22.1667C21.15 22.05 19.6333 21.7 18.2333 21.2333L19.6333 19.8333C20.5667 20.0667 21.6167 20.3 22.6667 20.3V22.1667Z" fill="#13297E"/>
-                                                      </svg>
-                                                </span>
-                                                <h5><a href="#">+1-202-555-0133</a></h5>
+                            <section class="widget widget_block">
+                                <div class="wp-block-image  is-layout-flow wp-block-group-is-layout-flow">
+                                    <div class="wp-block-group__inner-container">
+                                        <div class="aside-contact-card">
+                                            <div class="overlay">
+                                                <div class="overlay-content">
+                                                    <h4 class="heading">Have Any Questions ? Call Us Now.</h4>
+                                                    <div class="contact">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
+                                                                <path d="M23.8333 18.0833C22.4333 18.0833 20.9167 17.85 19.6333 17.3833H19.2833C18.9333 17.3833 18.7 17.5 18.4667 17.7333L15.9 20.3C12.6333 18.55 9.83333 15.8667 8.2 12.6L10.7667 10.0333C11.1167 9.68333 11.2333 9.21667 11 8.86667C10.65 7.58333 10.4167 6.06667 10.4167 4.66667C10.4167 4.08333 9.83333 3.5 9.25 3.5H5.16667C4.58333 3.5 4 4.08333 4 4.66667C4 15.6333 12.8667 24.5 23.8333 24.5C24.4167 24.5 25 23.9167 25 23.3333V19.25C25 18.6667 24.4167 18.0833 23.8333 18.0833ZM6.33333 5.83333H8.08333C8.2 6.88333 8.43333 7.93333 8.66667 8.86667L7.26667 10.2667C6.8 8.86667 6.45 7.35 6.33333 5.83333ZM22.6667 22.1667C21.15 22.05 19.6333 21.7 18.2333 21.2333L19.6333 19.8333C20.5667 20.0667 21.6167 20.3 22.6667 20.3V22.1667Z" fill="#13297E"/>
+                                                              </svg>
+                                                        </span>
+                                                        <h5><a href="#">+1-202-555-0133</a></h5>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </section>
-                            <section class="blogs-aside-item">
-                                <div class="category-card">
-                                    <span class="category-heading">Archives</span>
-                                    <ul class="categories">
-                                        <li><a href="#"><span>January 2023</span><span>(1)</span></a></li>
-                                        <li><a href="#"><span>February 2023</span><span>(3)</span></a></li>
-                                        <li><a href="#"><span>December 2022</span><span>(3)</span></a></li>
-
-                                    </ul>
+                            <section class="widget widget_block">
+                                <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                                    <div class="wp-block-group__inner-container">
+                                        <span class="wp-block-heading">Archive</span>
+                                        <ul class="wp-block-archives-list wp-block-archives">
+                                            <li>
+                                                <a href="#">
+                                                    <span>January 2023</span>
+                                                    <span>(1)</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>February 2023</span>
+                                                    <span>(3)</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>December 2022</span>
+                                                    <span>(3)</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </section>
                         </aside>
                     </div>
                     <div class="col-8-lg col-12-xs order-1-xs">
-                        <main class="main-blogs">
-                            <div class="article__card">
-                                <div class="article__img">
-                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
-                                </div>
-                                <div class="article__body">
-                                    <div class="article__body__top">
-                                        <ul class="article__tags">
-                                            <li class="tag"><a href="#">Health Care</a></li>
-                                            <li class="tag"><a href="#">Medicine</a></li>
-                                        </ul>
-                                        <h5 class="artile__title">Grownup Health Advice</h5>
+                        <div id="main" class="site-main">
+                            <div class="grid-layout-wrap layout-col-2">
+                                <div class="row gap-2">
+                                    <div class="col-6-md col-12-xs">
+                                        <article class="post">
+                                            <div class="article__card">
+                                                <div class="article__img">
+                                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
+                                                </div>
+                                                <div class="article__body">
+                                                    <div class="article__body__top">
+                                                        <ul class="article__tags">
+                                                            <li class="tag"><a href="#">Health Care</a></li>
+                                                            <li class="tag"><a href="#">Medicine</a></li>
+                                                        </ul>
+                                                        <h5 class="artile__title">Grownup Health Advice</h5>
+                                                    </div>
+                                                    <div class="article__body__bottom">
+                                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
+                                                    </div>
+                                                    <a class="btn__text">
+                                                        Read More 
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g id="chevron">
+                                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
                                     </div>
-                                    <div class="article__body__bottom">
-                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
+                                    <div class="col-6-md col-12-xs">
+                                        <article class="post">
+                                            <div class="article__card">
+                                                <div class="article__img">
+                                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
+                                                </div>
+                                                <div class="article__body">
+                                                    <div class="article__body__top">
+                                                        <ul class="article__tags">
+                                                            <li class="tag"><a href="#">Health Care</a></li>
+                                                            <li class="tag"><a href="#">Medicine</a></li>
+                                                        </ul>
+                                                        <h5 class="artile__title">Grownup Health Advice</h5>
+                                                    </div>
+                                                    <div class="article__body__bottom">
+                                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
+                                                    </div>
+                                                    <a class="btn__text">
+                                                        Read More 
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g id="chevron">
+                                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
                                     </div>
-                                    <a class="btn__text">
-                                        Read More 
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="chevron">
-                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="article__card">
-                                <div class="article__img">
-                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
-                                </div>
-                                <div class="article__body">
-                                    <div class="article__body__top">
-                                        <ul class="article__tags">
-                                            <li class="tag"><a href="#">Health Care</a></li>
-                                            <li class="tag"><a href="#">Medicine</a></li>
-                                        </ul>
-                                        <h5 class="artile__title">Grownup Health Advice</h5>
+                                    <div class="col-6-md col-12-xs">
+                                        <article class="post">
+                                            <div class="article__card">
+                                                <div class="article__img">
+                                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
+                                                </div>
+                                                <div class="article__body">
+                                                    <div class="article__body__top">
+                                                        <ul class="article__tags">
+                                                            <li class="tag"><a href="#">Health Care</a></li>
+                                                            <li class="tag"><a href="#">Medicine</a></li>
+                                                        </ul>
+                                                        <h5 class="artile__title">Grownup Health Advice</h5>
+                                                    </div>
+                                                    <div class="article__body__bottom">
+                                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
+                                                    </div>
+                                                    <a class="btn__text">
+                                                        Read More 
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g id="chevron">
+                                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
                                     </div>
-                                    <div class="article__body__bottom">
-                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
+                                    <div class="col-6-md col-12-xs">
+                                        <article class="post">
+                                            <div class="article__card">
+                                                <div class="article__img">
+                                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
+                                                </div>
+                                                <div class="article__body">
+                                                    <div class="article__body__top">
+                                                        <ul class="article__tags">
+                                                            <li class="tag"><a href="#">Health Care</a></li>
+                                                            <li class="tag"><a href="#">Medicine</a></li>
+                                                        </ul>
+                                                        <h5 class="artile__title">Grownup Health Advice</h5>
+                                                    </div>
+                                                    <div class="article__body__bottom">
+                                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
+                                                    </div>
+                                                    <a class="btn__text">
+                                                        Read More 
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g id="chevron">
+                                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
                                     </div>
-                                    <a class="btn__text">
-                                        Read More 
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="chevron">
-                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="article__card">
-                                <div class="article__img">
-                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
-                                </div>
-                                <div class="article__body">
-                                    <div class="article__body__top">
-                                        <ul class="article__tags">
-                                            <li class="tag"><a href="#">Health Care</a></li>
-                                            <li class="tag"><a href="#">Medicine</a></li>
-                                        </ul>
-                                        <h5 class="artile__title">Grownup Health Advice</h5>
-                                    </div>
-                                    <div class="article__body__bottom">
-                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
-                                    </div>
-                                    <a class="btn__text">
-                                        Read More 
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="chevron">
-                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="article__card">
-                                <div class="article__img">
-                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
-                                </div>
-                                <div class="article__body">
-                                    <div class="article__body__top">
-                                        <ul class="article__tags">
-                                            <li class="tag"><a href="#">Health Care</a></li>
-                                            <li class="tag"><a href="#">Medicine</a></li>
-                                        </ul>
-                                        <h5 class="artile__title">Grownup Health Advice</h5>
-                                    </div>
-                                    <div class="article__body__bottom">
-                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
-                                    </div>
-                                    <a class="btn__text">
-                                        Read More 
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="chevron">
-                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="article__card">
-                                <div class="article__img">
-                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
-                                </div>
-                                <div class="article__body">
-                                    <div class="article__body__top">
-                                        <ul class="article__tags">
-                                            <li class="tag"><a href="#">Health Care</a></li>
-                                            <li class="tag"><a href="#">Medicine</a></li>
-                                        </ul>
-                                        <h5 class="artile__title">Grownup Health Advice</h5>
-                                    </div>
-                                    <div class="article__body__bottom">
-                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
-                                    </div>
-                                    <a class="btn__text">
-                                        Read More 
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="chevron">
-                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
-                                            </g>
-                                        </svg>
-                                    </a>
+                                    
                                 </div>
                             </div>
-                            <div class="article__card">
-                                <div class="article__img">
-                                    <img class="w-100" src="./assets/images/article-1.png" alt="Grownup Health Advice" />
-                                </div>
-                                <div class="article__body">
-                                    <div class="article__body__top">
-                                        <ul class="article__tags">
-                                            <li class="tag"><a href="#">Health Care</a></li>
-                                            <li class="tag"><a href="#">Medicine</a></li>
-                                        </ul>
-                                        <h5 class="artile__title">Grownup Health Advice</h5>
-                                    </div>
-                                    <div class="article__body__bottom">
-                                        <p>I am so grateful for the care and attention that I received from my healthcare provider .....</p>
-                                    </div>
-                                    <a class="btn__text">
-                                        Read More 
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="chevron">
-                                            <path id="Vector" d="M6.69728 3.88034L10.4428 7.45582C10.5243 7.53355 10.5818 7.61776 10.6155 7.70844C10.6496 7.79912 10.6667 7.89628 10.6667 7.99992C10.6667 8.10356 10.6496 8.20072 10.6155 8.2914C10.5818 8.38208 10.5243 8.46629 10.4428 8.54401L6.69728 12.1195C6.548 12.262 6.35801 12.3333 6.12731 12.3333C5.8966 12.3333 5.70661 12.262 5.55733 12.1195C5.40805 11.977 5.33341 11.7956 5.33341 11.5754C5.33341 11.3552 5.40805 11.1738 5.55733 11.0313L8.73291 7.99992L5.55733 4.96853C5.40805 4.82603 5.33341 4.64466 5.33341 4.42443C5.33341 4.2042 5.40805 4.02284 5.55733 3.88034C5.70661 3.73784 5.8966 3.66659 6.12731 3.66659C6.35801 3.66659 6.548 3.73784 6.69728 3.88034Z" fill="#13297E"/>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </main>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+<!-- blog end -->
         <!-- footer start -->
      <footer id="colophon" class="site-footer">
         <div class="container">
