@@ -1,5 +1,5 @@
 .header-nologo-wrap
-        background: $primary-color
+        background: var(--medi-primary-color)
         display: none 
         +lg 
             display: block
@@ -82,9 +82,9 @@
                         color: $primary-color-100
                 .nav-links
                     +transition(0.3s ease)
-                    color: $primary-color
+                    color: var(--medi-primary-color)
             .menu-item.current-menu-item
-                background: $primary-color
+                background: var(--medi-primary-color)
                 +radius(4px)
                 +transition(0.3s ease)
                 &:hover
@@ -103,9 +103,9 @@
             .display-info
                 background: $secondary-color
                 padding: 10px 20px
-                color: $primary-color
+                color: var(--medi-primary-color)
                 path
-                    fill: $primary-color
+                    fill: var(--medi-primary-color)
             .sub-info
                 left: auto
                 right: 0

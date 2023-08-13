@@ -32,7 +32,7 @@
                                 background-color: $border-gray
                             a
                                 @extend %semi-bold 
-                                color: $primary-color
+                                color: var(--medi-primary-color)
                                 +display-flex 
                                 +align-items(center)
                                 gap: 8px
@@ -48,7 +48,7 @@
                         +align-items(center)
                         gap: 24px
                         a
-                            color: $primary-color
+                            color: var(--medi-primary-color)
                             @extend %semi-bold 
 
                         .category-list:not(:last-child)

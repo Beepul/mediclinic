@@ -44,7 +44,7 @@
         +flex-dir(column)
         gap: 48px
         height: 100%
-        background: $secondary-color
+        background: var(--medi-secondary-color)
         .center-title-con
             +align-items(center)
             +lg
@@ -77,60 +77,3 @@
                         padding: 12px 20px
             input[type="submit"]
                 margin-top: 20px
-    // &-form
-    //     +display-flex
-    //     +flex-dir(column)
-    //     gap: 24px
-    //     span
-    //         @extend %bold
-    //     form
-    //         +display-flex
-    //         +flex-dir(column)
-    //         gap: 24px
-    //         input
-    //             border: 0
-    //             padding: 16px 24px
-    //             +radius(4px)
-    //         .btn-primary
-    //             width: 100%
-    //             +sm 
-    //                 width: 182px  
-    //         .custom-select
-    //             background: $white-color
-    //             padding: 16px 24px
-    //             +radius(4px)
-    //             .select-text
-    //                 color: $text-gray
-    //                 width: 100%
-    //                 padding: 0
-    //                 +flex-just(space-between)
-    //             .select-options
-    //                 left: 0
-    //                 li
-    //                     padding: 12px 20px
-    //     &-phoneandselect
-    //         display: flex
-    //         gap: $base-gap
-    //         +breakpoint(1090px)
-    //             gap: $gap-md 
-    //             +flex-dir(column)
-    //         input
-    //             padding: 16px 20px !important
-    //         input, .custom-select
-    //             flex: 1
-    //     &-dateandtime
-    //         +display-flex
-    //         flex-wrap: wrap
-    //         gap: $base-gap
-    //         +breakpoint(993px)
-    //             gap: $gap-md
-    //         input
-    //             flex: 1
-    //             color: $text-gray
-    //     &-confirm
-    //         +display-flex
-    //         +align-items(center)
-    //         gap: 10px
-    //         p
-    //             font-size: $base-font - 2
-    //             color: $text-gray

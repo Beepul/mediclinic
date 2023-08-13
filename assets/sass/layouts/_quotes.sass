@@ -1,6 +1,6 @@
 .quotes
     &-main-con 
-        background-color: $secondary-color
+        background-color: var(--medi-secondary-color)
         padding: 50px 0
     &-con 
         @extend %display-center
@@ -8,12 +8,12 @@
         gap: $gap-lg
         text-align: center
         h2,p
-            color: $primary-color
+            color: var(--medi-primary-color)
         .signature-con
             @extend %display-center
             +flex-dir(column)
             p
-                color: $primary-color
+                color: var(--medi-primary-color)
         .signature
             width: 140px
         .signature-author
@@ -22,7 +22,7 @@
             gap: 8px
             padding: 6px 0
             p
-                color: $primary-color
+                color: var(--medi-primary-color)
                 @extend %regular
                 font-style: italic
                 font-size: $font-lg + 2px

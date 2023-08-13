@@ -41,10 +41,10 @@
                             left: 0%
                             width: 0%
                             height: 2.5px
-                            background: $primary-color
+                            background: var(--medi-primary-color)
                             +transition(width 0.3s linear)
                         &:hover
-                            color: $primary-color
+                            color: var(--medi-primary-color)
                             &::before
                                 width: 100%
                     
@@ -65,7 +65,7 @@
                         display: none
                     &:hover
                         path
-                            fill: $primary-color
+                            fill: var(--medi-primary-color)
                         .sub-menu
                             visibility: visible
                             opacity: 1
@@ -81,7 +81,7 @@
                         z-index: 20
                         border-radius: 0 0 5px 5px
                         box-shadow: 0px 4px 12px 1px rgba(23, 140, 239, 0.24)
-                        border-top: 3px solid $primary-color
+                        border-top: 3px solid var(--medi-primary-color)
                         transition: opacity 0.3s ease-out
                         opacity: 0
                         visibility: hidden
@@ -97,7 +97,7 @@
                                     display: none
                             
                             &:hover
-                                background: $primary-color
+                                background: var(--medi-primary-color)
                                 a 
                                     color: $white-color
                             &:not(:last-child)
@@ -148,7 +148,7 @@
             +display-flex
             +align-items(center)
             gap: $gap-sm - 10px
-            color: $primary-color
+            color: var(--medi-primary-color)
             +transition(0.3s ease)
             svg
                 path
@@ -182,18 +182,18 @@
     .social
         background: $white-color
         a
-            color: $primary-color
+            color: var(--medi-primary-color)
             &:hover
                 color: $primary-color-100
                 path
                     fill: $primary-color-100
             path
-                fill: $primary-color
+                fill: var(--medi-primary-color)
     .social-link-con
         .social-link
             background-color: $secondary-color-100 !important
     .header-mid
-        background: $primary-color
+        background: var(--medi-primary-color)
         padding: $padding-lg 0
         +lg 
             padding: 0
@@ -266,9 +266,9 @@
                     &::after
                         background: $primary-color-100 !important
         .nav-links
-            color: $primary-color !important
+            color: var(--medi-primary-color) !important
             &::after
-                background: $primary-color !important
+                background: var(--medi-primary-color) !important
         .menu-item.current-menu-item
                 .nav-links
                     position: relative
@@ -279,7 +279,7 @@
                         position: absolute
                         top: 100%
                         left: 0
-                        background: $primary-color 
+                        background:  var(--medi-primary-color)
 .header-four
     position: relative
     .header-top
@@ -392,14 +392,14 @@
         
 .header-five
     .header-top
-        background: $primary-color
+        background: var(--medi-primary-color)
         padding: 0
         +md
             padding: $base-padding 0
         .social-link-con
             .social-link.share-link
                 border-radius: 0 
-                background-color: $primary-color !important
+                background-color: var(--medi-primary-color) !important
                 span,path
                     +transition(.3s ease-in-out)
                 &:hover
@@ -482,11 +482,11 @@
         .menu-item
             cursor: pointer
         .menu-item.current-menu-item
-            background: $secondary-color !important
+            background: var(--medi-secondary-color) !important
             &:hover
                 background: $secondary-color-200 !important
             a
-                color: $primary-color !important
+                color: var(--medi-primary-color) !important
     .social-link-con
         width: 100%
         +flex-just(end)

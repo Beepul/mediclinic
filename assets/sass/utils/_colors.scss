@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+// font
+$font:'Open Sans', sans-serif;
+
 $primary-color: #13297E;
 $primary-color-100:#1e3ebd;
 $secondary-color: #178CEF1F;
@@ -20,3 +25,20 @@ $gradient-color: linear-gradient(90deg, #178CEF 0%, #349BEF 26.56%, #76B9F0 55.2
 
 // box-shadow
 $box-shadow-color:0px 0px 12px 1px rgba(23, 140, 239, 0.24);
+
+
+$theme-colors: ();
+$theme-colors: map-merge(
+    (
+        'medi-primary-color': $primary-color,
+        'medi-secondary-color': $secondary-color,  
+        'medi-primary-font': $font,  
+    ),
+    $theme-colors
+);
+
+:root{
+    @each $color,$value in $theme-colors{
+        --#{$color}: #{$value};
+    }
+}

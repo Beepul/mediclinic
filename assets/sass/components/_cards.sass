@@ -18,7 +18,7 @@
             gap: $base-padding
             +transition(.3s ease-in-out)
             .icon
-                background-color: $secondary-color
+                background-color: var(--medi-secondary-color)
                 @extend %display-center
                 +radius(50%)
                 height: 50px
@@ -41,7 +41,7 @@
         +align-items(center)
         gap: 4px
         @extend %semi-bold
-        color: $primary-color
+        color: var(--medi-primary-color)
 
 .card-sky-blue
     @extend .card
@@ -110,7 +110,7 @@
         +flex-dir(column)
         
     &-name 
-        color: $primary-color
+        color: var(--medi-primary-color)
     &-profession
         @extend %semi-bold
     &-uni 
@@ -127,7 +127,7 @@
     gap: 24px
     .price
         .pricing-price
-            color: $primary-color
+            color: var(--medi-primary-color)
         .pricing-title
             @extend %uppercase
 
@@ -159,7 +159,7 @@
 
             
 .pricing-card.active
-    background: $primary-color
+    background: var(--medi-primary-color)
     color: $white-color
     position: relative
     overflow: hidden
@@ -168,7 +168,7 @@
         position: absolute
         background: $white-color
         height: 24px
-        color: $primary-color
+        color: var(--medi-primary-color)
         @extend %display-center
         width: 200px
         font-size: 12px
@@ -194,7 +194,7 @@
                 content: url("../assets/icons/tick-mark-white.svg")
     .btn-primary
         background: $white-color
-        color: $primary-color
+        color: var(--medi-primary-color)
         @extend %semi-bold
 
 // testimonials card
@@ -221,7 +221,7 @@
         .profile-info
             &-name 
                 @extend %semi-bold
-                color: $primary-color
+                color: var(--medi-primary-color)
             &-title 
                 font-size: 14px
 
@@ -253,7 +253,7 @@
                     .tag
                         a
                             font-size: 14px 
-                            color: $primary-color
+                            color: var(--medi-primary-color)
                             @extend %semi-bold
                             +transition(0.3s ease)
                             &:hover
@@ -273,7 +273,7 @@
                     cursor: pointer
                     +transition(0.3s ease)
                     &:hover
-                        color: $primary-color
+                        color: var(--medi-primary-color)
             &__bottom
                 color: $text-gray
     &__related__card
@@ -284,7 +284,7 @@
             cursor: pointer
             +transition(0.3s ease)
             &:hover
-                color: $primary-color
+                color: var(--medi-primary-color)
         .article__info
             +display-flex
             +align-items(center)
@@ -298,14 +298,14 @@
         +flex-just(center)
         .icon
             +radius(50%)
-            background: $secondary-color
+            background: var(--medi-secondary-color)
             height: 150px
             width: 150px
             @extend %display-center
             position: relative
             .sn
                 position: absolute
-                background: $primary-color
+                background: var(--medi-primary-color)
                 color: $white-color
                 +radius(50%)
                 @extend %display-center
@@ -374,7 +374,7 @@
     gap: 24px
     min-height: auto
     .category-heading
-        color: $primary-color
+        color: var(--medi-primary-color)
         @extend %bold
     .categories
         +display-flex
@@ -405,7 +405,7 @@
     gap: 24px
     .card-heading
         @extend %bold
-        color: $primary-color
+        color: var(--medi-primary-color)
     .card-body
         +display-flex
         +flex-dir(column)
@@ -431,7 +431,7 @@
     gap: 24px
     min-height: auto
     .card-heading
-        color: $primary-color
+        color: var(--medi-primary-color)
         @extend %bold
     .card-body
         +display-flex
@@ -445,13 +445,13 @@
                 color: $text-gray
                 +transition(0.3s ease)
                 &:hover
-                    color: $primary-color
-                    border-color: $primary-color
+                    color: var(--medi-primary-color)
+                    border-color: var(--medi-primary-color)
 
 .quotes-card
-    background: $secondary-color
+    background: var(--medi-secondary-color)
     padding: 24px 
-    border-left: 4px solid $primary-color
+    border-left: 4px solid var(--medi-primary-color)
     position: relative
     &::after
         content: url("../assets/icons/quote.svg")
@@ -460,7 +460,7 @@
         right: 5%
     .quote
         margin-bottom: 24px
-        color: $primary-color
+        color: var(--medi-primary-color)
     .writer
         color: $text-gray
         span

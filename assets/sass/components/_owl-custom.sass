@@ -5,12 +5,12 @@
         gap: 16px
     &-dot
         background: $white-color  !important
-        border: 1px solid $primary-color !important
+        border: 1px solid var(--medi-primary-color) !important
         border-radius: 50%
         height: 14px
         width: 14px
     &-dot.active
-        background: $primary-color !important
+        background: var(--medi-primary-color) !important
         height: 18px
         width: 18px
     &-prev, &-next 
@@ -68,9 +68,9 @@
             span
                 height: 100%
                 display: block
-                background: $primary-color
+                background: var(--medi-primary-color)
                 animation: animateDot 2.8s linear 
-                border-color: $primary-color
+                border-color: var(--medi-primary-color)
 @keyframes animateDot
     0%
         width: 0%

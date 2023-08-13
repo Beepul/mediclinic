@@ -1,5 +1,5 @@
 .banner
-    background: $secondary-color
+    background: var(--medi-secondary-color)
     min-height: 200px
     +sm 
         min-height: 500px
@@ -58,7 +58,7 @@
                 width: 100%
                 +display-flex
                 +flex-dir(column)
-                gap: $base-gap
+                gap: 24px
                 .greating
                     padding: 6px 12px
                     color: $white-color
@@ -181,6 +181,11 @@
                 background: $secondary-color-300
             +xl
                 margin-left: 50px
+            .card-info-icon
+                .icon
+                    height: 32px 
+                    width: 32px
+                    font-size: 14px
             .banner-card-wrap
                 display: none 
                 +lg 

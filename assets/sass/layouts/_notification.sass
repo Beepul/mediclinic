@@ -1,7 +1,7 @@
 .notification-section
     font-size: $font-md
     color: $black-color
-    background-color: $secondary-color
+    background-color: var(--medi-secondary-color)
     padding: 20px 0
     overflow: hidden
     transition: height 0.6s linear
@@ -27,7 +27,7 @@
                 +display-flex
                 +align-items(center)
                 gap:12px
-                color: $primary-color
+                color: var(--medi-primary-color)
                 @extend %semi-bold
         &-desc
             padding-left: 32px
@@ -40,7 +40,7 @@
                 +align-items(center)
                 gap: 24px
             a
-                color: $primary-color
+                color: var(--medi-primary-color)
                 @extend %semi-bold
                 +transition(0.6s ease)
 
@@ -56,7 +56,7 @@
                     position: absolute
                     height: 1px
                     width: 100%
-                    background-color: $primary-color
+                    background-color: var(--medi-primary-color)
                     bottom: 5%
                     left: 0%
                     +transition(0.6s ease)
@@ -69,7 +69,7 @@
                     position: absolute
                     height: 20px
                     width: 1.5px
-                    background-color: $primary-color
+                    background-color: var(--medi-primary-color)
                     top: 5%
                     right: -5%
                     +breakpoint(568px)
@@ -95,7 +95,7 @@
 // notification of header two
 // .header-two
 .notification-wrap
-    background: $primary-color
+    background: var(--medi-primary-color)
     font-size: $font-md
     padding: 0
     height: 2px
@@ -107,7 +107,7 @@
         display: none
     .show-notification
         position: absolute
-        background: $primary-color
+        background: var(--medi-primary-color)
         top: 100%
         height: 20px
         width: 15px
@@ -216,7 +216,7 @@
             padding: 20px 0
             transform: translateY(0)
             a
-                color: $primary-color
+                color: var(--medi-primary-color)
                 @extend %semi-bold
                 +display-flex
                 +align-items(center)

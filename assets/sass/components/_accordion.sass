@@ -16,7 +16,7 @@
             margin-left: 5px
             +transition(0.6s ease)
     .accordion-header.active
-        color: $primary-color
+        color: var(--medi-primary-color)
         border-radius: 4px 4px 0 0
         &::before 
             content: url(../assets/icons/minus.svg)
@@ -24,17 +24,5 @@
         max-height: 0
         overflow: hidden
         transition: max-height 0.3s ease-out
-        // overflow: hidden
-        // height: 0
-        // background: $white-color
-        // color: $text-gray
-        // border-radius: 0 0 4px 4px
-        // +transition(height 0.4s linear)
         .accordion-body
             padding: 20px
-    // .accordion-content.active
-    //     height: 170px
-    //     +md 
-    //         height: 100px
-    //     +lg 
-    //         height: 120px

@@ -2,8 +2,8 @@
     &-primary
         font-size: $base-font
         color: $white-color
-        background: $primary-color
-        border-color: $primary-color
+        background: var(--medi-primary-color)
+        border-color: var(--medi-primary-color)
         padding: $padding-sm $padding-xl
         +radius(4px)
         transition: all 0.3s linear
@@ -11,16 +11,16 @@
             background: $primary-color-100 
             border-color: $primary-color-100
         &:focus
-            background: $primary-color
-            border-color: $primary-color 
+            background: var(--medi-primary-color)
+            border-color: var(--medi-primary-color) 
 
     &-white 
         @extend .btn-primary
         background: $white-color
-        color: $primary-color
+        color: var(--medi-primary-color)
         @extend %semi-bold
     &__text
-        color: $primary-color
+        color: var(--medi-primary-color)
         cursor: pointer
         @extend %semi-bold
         +display-flex
@@ -40,8 +40,8 @@
     &__secondary
         @extend .btn-primary
         background: $sec-btn
-        color: $primary-color
+        color: var(--medi-primary-color)
         @extend %semi-bold
         &:hover
-            background: $secondary-color !important
-            border-color: $secondary-color !important
+            background: var(--medi-secondary-color) !important
+            border-color: var(--medi-secondary-color) !important
